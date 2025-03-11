@@ -1,0 +1,48 @@
+<section class="form section">
+  <div class="container">
+    <form action="/" method="post" class="form form--row">
+      <div class="form__text">
+        <p>Не&nbsp;нашли свой вопрос?</p>
+        <p>Оставьте заявку и&nbsp;мы&nbsp;поможем!</p>
+      </div>
+      <div class="form__col">
+        <div class="form__group">
+          <input
+            type="text"
+            class="form__input"
+            name="name"
+            placeholder="Имя"
+            required
+          />
+        </div>
+        <div class="form__group">
+          <input
+            type="tel"
+            name="tel"
+            class="form__input form__input--tel"
+            placeholder="+_(___)-___-__-__"
+            required
+          />
+        </div>
+      </div>
+      <div class="form__col">
+        <div class="form__group">
+          <input
+            type="file"
+            name="file"
+            accept=""
+            class="form__file-input"
+            id="form-help-file"
+          />
+          <label class="form__file-label" for="form-help-file"></label>
+        </div>
+
+        <input
+          class="form__btn btn"
+          type="submit"
+          value="Получить консультацию"
+        />
+      </div>
+    </form>
+  </div>
+</section>

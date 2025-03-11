@@ -1,0 +1,74 @@
+.banner-slider {
+  &__arrow {
+    top: 85%;
+    width: 80px;
+    height: 80px;
+    background: transparent;
+    border: 2px solid transparent;
+    border-radius: 0;
+    opacity: 1;
+    transition: ease-out 0.3s;
+
+    &:hover {
+      border-color: var(--color-white);
+    }
+
+    &:hover:not(:disabled) {
+      opacity: 1;
+    }
+  }
+
+  &__slide {
+    position: relative;
+    width: 100%;
+    height: 850px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-image: linear-gradient(120deg, rgba(0, 0, 0), transparent);
+      inset: 0;
+      opacity: 0.25;
+      z-index: 1;
+    }
+  }
+
+  &__back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 var(--container-offset);
+    max-width: calc(var(--container-width) + (var(--container-offset) * 2));
+    height: 850px;
+    z-index: 2;
+  }
+
+  &__content {
+    max-width: 60%;
+  }
+
+  &__title {
+    color: var(--color-white);
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 0.95;
+    font-family: var(--second-family);
+    margin: 0;
+  }
+
+  &__add {
+    font-family: var(--second-family);
+    font-size: 48px;
+    font-weight: 400;
+    color: var(--color-secondary);
+  }
+}
