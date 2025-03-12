@@ -17,23 +17,46 @@
       <nav class="header__menu menu">
         <ul class="menu__left list-reset">
           <li class="menu__item">
-            <a href="" class="menu__link link">Роботизация</a>
+            <a href="#" class="menu__link link">Роботизация</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link link">Интеграция</a>
+            <a href="#" class="menu__link link">Интеграция</a>
           </li>
         </ul>
-        <a href="" class="logo"
+        <a href="#" class="logo"
           ><img src="../img/logo.svg" alt="" class="logo__img"
         /></a>
 
         <div class="header__rightside">
           <ul class="menu__right list-reset">
             <li class="menu__item">
-              <a href="" class="menu__link link">Интернет-магазин</a>
+              <a href="#" class="menu__link link">Интернет-магазин</a>
             </li>
             <li class="menu__item">
-              <a href="" class="menu__link link link--dropdown">О компании</a>
+              <a
+                href="#"
+                class="menu__link link link--dropdown"
+                aria-controls="submenu-list"
+                aria-expanded="false"
+                >О компании</a
+              >
+              <ul class="menu__submenu submenu list-reset" id="submenu-list">
+                <li class="submenu__item">
+                  <a href="#" class="submenu__link link">Доставка и оплата</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="#" class="submenu__link link">Сертификаты</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="#" class="submenu__link link">Акции</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="#" class="submenu__link link">Юридическим лицам</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="#" class="submenu__link link">О нас</a>
+                </li>
+              </ul>
             </li>
           </ul>
           <div class="header__icons">
@@ -46,6 +69,81 @@
           </div>
         </div>
       </nav>
+
+      <div class="header__mobile header-mob">
+        <a href="#" class="header-mob__link link">Интернет-магазин</a>
+        <a href="#" class="logo"
+          ><img src="../img/logo.svg" alt="" class="logo__img"
+        /></a>
+        <div class="header-mob__rightside">
+          <div class="header__icons">
+            <a href="#" class="search"
+              ><img src="../img/search-icon.svg" alt="" class="header__icon"
+            /></a>
+            <a href="#" class="header__cart-link"
+              ><img src="../img/cart-icon.svg" alt="" class="header__icon"
+            /></a>
+          </div>
+          <button class="menu-trigger">
+            <span class="menu-trigger__icon"></span>
+          </button>
+          <div class="header-mob__burger">
+            <nav class="header-mob__menu mob-menu">
+              <ul class="mob-menu__list list-reset">
+                <li class="mob-menu__item">
+                  <a href="#" class="mob-menu__link link">Главная</a>
+                </li>
+                <li class="mob-menu__item">
+                  <a href="#" class="mob-menu__link link">Интернет-магазин</a>
+                </li>
+                <li class="mob-menu__item">
+                  <a href="#" class="mob-menu__link link">Роботизация</a>
+                </li>
+                <li class="mob-menu__item">
+                  <a href="#" class="mob-menu__link link">Интеграция</a>
+                </li>
+                <li class="mob-menu__item">
+                  <a
+                    href="#"
+                    class="mob-menu__link--drop link link--dropdown"
+                    aria-controls="mob-list"
+                    aria-expanded="false"
+                    >О компании</a
+                  >
+                  <ul
+                    class="menu__submenu mob-submenu list-reset"
+                    id="mob-list"
+                  >
+                    <li class="submenu__item">
+                      <a href="#" class="mob-submenu__link link"
+                        >Доставка и оплата</a
+                      >
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#" class="mob-submenu__link link">Сертификаты</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#" class="mob-submenu__link link">Акции</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#" class="mob-submenu__link link"
+                        >Юридическим лицам</a
+                      >
+                    </li>
+                    <li class="submenu__item">
+                      <a href="#" class="mob-submenu__link link">О нас</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="mob-menu__add">
+                <a href="" class="mob-menu__link link">Корзина</a>
+                <a href="" class="mob-menu__link link">Мои заказы</a>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </header>
@@ -77,11 +175,6 @@
     <div class="splide__track">
       <ul class="splide__list">
         <li class="splide__slide banner-slider__slide">
-          <img
-            src="../img/banner-slider.png"
-            alt=""
-            class="banner-slider__back"
-          />
           <div class="banner-slider__inner">
             <div class="banner-slider__content">
               <h2 class="banner-slider__title">
@@ -95,6 +188,57 @@
         </li>
       </ul>
     </div>
+  </div>
+</section>
+
+      <!--  -->
+      <section class="expert section">
+  <div class="container">
+    <div class="expert__content">
+      <div class="expert__info">
+        <h2 class="expert__title section__title">
+          <span class="text--red">Ваш эксперт</span> в&nbsp;области сварочного
+          оборудования
+        </h2>
+        <p class="expert__descr">
+          Мы&nbsp;не&nbsp;просто решаем задачи -<br />
+          Мы&nbsp;создаем решения, идеально подходящие именно вам
+        </p>
+      </div>
+      <button class="btn">Button</button>
+    </div>
+  </div>
+</section>
+
+      <!--  -->
+      <section class="numbers section">
+  <div class="container">
+    <h2 class="section__title">О нас в цифрах</h2>
+
+    <ul class="numbers__list list-reset">
+      <li class="numbers__item numbers--1">
+        <div class="numbers__subtitle">> 200</div>
+        <p class="numbers__text">Выполнено более 200 пуско-наладочных работ</p>
+      </li>
+      <li class="numbers__item numbers--2">
+        <div class="numbers__subtitle">> 1 млн</div>
+        <p class="numbers__text">
+          Продано более 1&nbsp;млн единиц сварочного оборудования
+        </p>
+      </li>
+      <li class="numbers__item numbers--3">
+        <div class="numbers__subtitle">Топ - 3</div>
+        <p class="numbers__text">
+          Дистрибьютеров сварочного оборудования в&nbsp;РФ
+        </p>
+      </li>
+      <li class="numbers__item numbers--4">
+        <div class="numbers__subtitle">> 100</div>
+        <p class="numbers__text">
+          Выполнено более 100 проектов по&nbsp;роботизации производств
+        </p>
+      </li>
+    </ul>
   </div>
 </section>
 

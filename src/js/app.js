@@ -7,22 +7,47 @@ import fslightbox from "fslightbox";
 flsFunctions.isWebp();
 // flsFunctions.mainOffset();
 
-// const burgerBtn = document.querySelector(".menu-trigger");
-// const menu = document.querySelector(".menu");
-// burgerBtn.addEventListener("click", (e) => {
-//   burgerBtn.classList.toggle("menu-trigger--is-open");
-//   menu.classList.toggle("menu--is-open");
-//   document.body.classList.toggle("locked");
+const dropdownLink = document.querySelector(".link--dropdown");
+dropdownLink.addEventListener("click", () => {
+  dropdownLink.classList.toggle("active");
+  dropdownLink.setAttribute(
+    "aria-expanded",
+    dropdownLink.classList.contains("active") ? "true" : "false"
+  );
+});
 
-//   menu.addEventListener("click", (e) => {
-//     console.log(e.target);
-//     if (e.target == menu || e.target.classList.contains("menu__link")) {
-//       burgerBtn.classList.remove("menu-trigger--is-open");
-//       menu.classList.remove("menu--is-open");
-//       document.body.classList.remove("locked");
-//     }
-//   });
-// });
+const dropdownMobLink = document.querySelector(".mob-menu__link--drop");
+dropdownMobLink.addEventListener("click", () => {
+  dropdownMobLink.classList.toggle("active");
+  dropdownMobLink.setAttribute(
+    "aria-expanded",
+    dropdownMobLink.classList.contains("active") ? "true" : "false"
+  );
+});
+
+const burgerBtn = document.querySelector(".menu-trigger");
+const menu = document.querySelector(".mob-menu");
+const burgerBack = document.querySelector(".header-mob__burger");
+burgerBtn.addEventListener("click", (e) => {
+  burgerBtn.classList.toggle("menu-trigger--is-open");
+  menu.classList.toggle("mob-menu--is-open");
+  burgerBack.classList.toggle("header-mob__burger--active");
+  document.body.classList.toggle("locked");
+
+  menu.addEventListener("click", (e) => {
+    console.log(e.target);
+    if (
+      e.target == menu ||
+      e.target.classList.contains("mob-menu__link") ||
+      e.target.classList.contains("mob-submenu__link")
+    ) {
+      burgerBtn.classList.remove("menu-trigger--is-open");
+      menu.classList.remove("mob-menu--is-open");
+      burgerBack.classList.remove("header-mob__burger--active");
+      document.body.classList.remove("locked");
+    }
+  });
+});
 
 //banner-slider
 document.addEventListener("DOMContentLoaded", function () {
@@ -31,7 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
     arrows: true,
     pagination: false,
     perPage: 1,
-    // gap: "20px",
     classes: {
       arrows: "splide__arrows banner-slider__arrows",
       arrow: "splide__arrow banner-slider__arrow",
