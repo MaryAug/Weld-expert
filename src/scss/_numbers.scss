@@ -1,6 +1,6 @@
 .numbers {
   position: relative;
-  background-image: url("../img/numbers-back.png");
+  background-image: url("../img/numbers-back.svg");
   background-repeat: no-repeat;
   background-size: contain;
 
@@ -49,13 +49,6 @@
     color: var(--color-secondary);
     margin: 0;
   }
-
-  &__text {
-    font-family: var(--second-family);
-    font-weight: 700;
-    font-size: 20px;
-    margin: 0;
-  }
 }
 
 @media (max-width: 1199px) {
@@ -79,10 +72,6 @@
       padding-left: 20px;
       padding-right: 20px;
       padding-top: 40px;
-    }
-
-    &__text {
-      font-size: 16px;
     }
   }
 }
@@ -157,11 +146,6 @@
       top: -17px;
       font-size: 32px;
       padding: 0 3px;
-    }
-
-    &__text {
-      font-weight: inherit;
-      font-size: 12px;
     }
   }
 }

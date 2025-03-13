@@ -80,7 +80,7 @@ img {
 
 .section {
   margin-top: 50px;
-  // padding-top: 30px;
+  padding-top: 30px;
   padding-bottom: 30px;
 
   &__title {
@@ -89,6 +89,13 @@ img {
     font-family: var(--second-family);
     margin: 0;
     padding-bottom: 60px;
+  }
+
+  &__subhead {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0;
   }
 }
 
@@ -246,12 +253,18 @@ img {
 }
 
 @media (max-width: 1199px) {
+  .section {
+    &__subhead {
+      font-size: 16px;
+    }
+  }
 }
 
 @media (max-width: 999px) {
   .section {
     &__title {
       font-size: 32px;
+      padding-bottom: 40px;
     }
   }
 }
@@ -282,6 +295,12 @@ img {
   .section {
     &__title {
       font-size: 20px;
+      padding-bottom: 30px;
+    }
+
+    &__subhead {
+      font-weight: inherit;
+      font-size: 12px;
     }
   }
 }

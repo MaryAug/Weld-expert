@@ -56,6 +56,9 @@ document.addEventListener("DOMContentLoaded", function () {
     arrows: true,
     pagination: false,
     perPage: 1,
+    autoplay: true,
+    interval: 5000,
+    speed: 1100,
     classes: {
       arrows: "splide__arrows banner-slider__arrows",
       arrow: "splide__arrow banner-slider__arrow",

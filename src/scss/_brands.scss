@@ -1,0 +1,28 @@
+.brands {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__logo {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .brands {
+    &__wrapper {
+      flex-wrap: wrap;
+      justify-content: center;
+      column-gap: 15px;
+      row-gap: 5px;
+    }
+
+    &__logo {
+      flex-basis: 63px;
+      max-width: 64px;
+    }
+  }
+}

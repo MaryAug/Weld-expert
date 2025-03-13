@@ -57,6 +57,17 @@
     line-height: 0.95;
     font-family: var(--second-family);
     margin: 0;
+    opacity: 0;
+    animation: banner-text 2.5s forwards;
+  }
+
+  @keyframes banner-text {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 
   &__add {
