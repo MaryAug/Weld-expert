@@ -61,12 +61,31 @@ document.addEventListener("DOMContentLoaded", function () {
     speed: 1100,
     classes: {
       arrows: "splide__arrows banner-slider__arrows",
-      arrow: "splide__arrow banner-slider__arrow",
+      arrow: "splide__arrow banner-slider__arrow slider-main-arrow",
       prev: "splide__arrow--prev banner-slider__arrow--prev",
       next: "splide__arrow--next banner-slider__arrow--next",
     },
   });
   bannerSlider.mount();
+});
+
+//team-slider
+document.addEventListener("DOMContentLoaded", function () {
+  const teamSlider = new Splide(".team__slider", {
+    type: "loop",
+    arrows: true,
+    pagination: false,
+    perPage: 3,
+    perMove: 1,
+    gap: "var(--gap)",
+    classes: {
+      arrows: "splide__arrows team__arrows",
+      arrow: "splide__arrow team-slider__arrow slider-main-arrow",
+      prev: "splide__arrow--prev team__arrow--prev",
+      next: "splide__arrow--next team__arrow--next",
+    },
+  });
+  teamSlider.mount();
 });
 
 // const elements = document.querySelectorAll(".form__input--tel");

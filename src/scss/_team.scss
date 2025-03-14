@@ -1,0 +1,72 @@
+.team {
+  &__slider {
+  }
+  &__arrow {
+  }
+  &__arrows {
+  }
+  &__arrow--prev {
+    left: 0;
+  }
+  &__arrow--next {
+    right: 0;
+  }
+  &__arrow-img {
+  }
+  &__slide {
+    position: relative;
+  }
+  &__img {
+  }
+  &__person {
+  }
+}
+.person {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background-color: rgba($color: #fff, $alpha: 0.7);
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+
+  &__inner {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__info {
+  }
+
+  &__name {
+    padding-bottom: 5px;
+    font-size: 36px;
+    font-weight: 700;
+    font-family: var(--second-family);
+    color: var(--color-secondary);
+  }
+
+  &__post {
+  }
+
+  &__text {
+    margin: 0;
+
+    font-weight: 600;
+  }
+
+  &__contacts {
+  }
+  &__tel {
+  }
+  &__mail {
+  }
+}
+
+.team__slide:hover .person {
+  opacity: 1;
+  visibility: visible;
+}
