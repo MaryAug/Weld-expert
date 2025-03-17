@@ -2,42 +2,24 @@
   position: relative;
   background-color: var(--color-gray-900);
 
-  &::after {
+  &::before {
     position: absolute;
-    bottom: 120px;
-    right: -20%;
+    top: 0;
     content: "";
-    background-image: url("../img/robotics-img.png");
-    background-position: right bottom;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 1024px;
-    height: 1022px;
-    z-index: 1;
+    background-color: var(--color-bg);
+    width: 100%;
+    height: 130px;
+    clip-path: polygon(0 0, 100% 0%, 0px 100%, 0 0px);
   }
 
-  &__back {
-    position: relative;
-
-    &::before {
-      position: absolute;
-      top: -32px;
-      content: "";
-      background-color: var(--color-bg);
-      width: 100%;
-      height: 100px;
-      clip-path: polygon(0 0, 100% 0%, 0px 100%, 0 0px);
-    }
-
-    &::after {
-      position: absolute;
-      bottom: -32px;
-      content: "";
-      background-color: var(--color-bg);
-      width: 100%;
-      height: 100px;
-      clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%);
-    }
+  &::after {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    background-color: var(--color-bg);
+    width: 100%;
+    height: 130px;
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%);
   }
 
   &__wrapper {
@@ -128,15 +110,6 @@
 
 @media (max-width: 1199px) {
   .robotics {
-    &::after {
-      top: 20px;
-      right: -14%;
-      bottom: initial;
-      height: 1040px;
-      background-position: right top;
-      z-index: 0;
-    }
-
     &__wrapper {
       flex-direction: column;
       align-items: flex-start;
@@ -152,8 +125,7 @@
     }
 
     &__adv-list {
-      flex-direction: row;
-      flex-wrap: wrap;
+      flex-flow: row wrap;
       row-gap: 20px;
       column-gap: 10px;
     }
@@ -167,12 +139,11 @@
 
 @media (max-width: 999px) {
   .robotics {
-    &__back {
-      &::before,
-      &::after {
-        height: 70px;
-      }
+    &::before,
+    &::after {
+      height: 70px;
     }
+
     &__title {
       padding-bottom: 20px;
     }
@@ -196,14 +167,8 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .robotics {
-    &::after {
-      top: 40px;
-      height: 611px;
-      width: 460px;
-    }
-
     &__inner {
       max-width: 75%;
     }
@@ -216,16 +181,6 @@
 
 @media (max-width: 649px) {
   .robotics {
-    &::after {
-      top: initial;
-      bottom: 85px;
-      left: -33%;
-      height: 860px;
-      width: 700px;
-      background-position: left bottom;
-      transform: scale(-1, 1);
-    }
-
     &__wrapper {
       align-items: initial;
     }
@@ -236,8 +191,7 @@
     }
 
     &__adv-list {
-      flex-direction: column;
-      flex-wrap: nowrap;
+      flex-flow: column nowrap;
       align-items: end;
     }
     &__adv-item {
@@ -248,15 +202,9 @@
 
 @media (max-width: 479px) {
   .robotics {
+    &::before,
     &::after {
-      left: -34%;
-      height: 930px;
-    }
-    &__back {
-      &::before,
-      &::after {
-        height: 95px;
-      }
+      height: 95px;
     }
 
     &__wrapper {
@@ -285,18 +233,9 @@
 
 @media (max-width: 359px) {
   .robotics {
+    &::before,
     &::after {
-      bottom: 320px;
-      left: -25%;
-      height: 630px;
-      width: 480px;
-    }
-
-    &__back {
-      &::before,
-      &::after {
-        height: 55px;
-      }
+      height: 55px;
     }
 
     &__wrapper {

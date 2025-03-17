@@ -1,3 +1,22 @@
+.slider-main__pagination {
+  bottom: -60px;
+  gap: 10px;
+}
+
+.slider-main__page {
+  background-color: transparent;
+  border: 2px solid var(--color-gray-700);
+  width: 13px;
+  height: 13px;
+  box-shadow: var(--shadow);
+}
+
+.slider-main__page.is-active {
+  border: var(---color-secondary);
+  background-color: var(--color-secondary);
+  transform: none;
+}
+
 .slider-main-arrow {
   width: 80px;
   height: 80px;

@@ -75,14 +75,36 @@ document.addEventListener("DOMContentLoaded", function () {
     type: "loop",
     arrows: true,
     pagination: false,
+    autoWidth: true,
+    start: 1,
     perPage: 3,
     perMove: 1,
+    clones: 0,
+    focus: "center",
     gap: "var(--gap)",
     classes: {
       arrows: "splide__arrows team__arrows",
       arrow: "splide__arrow team-slider__arrow slider-main-arrow",
       prev: "splide__arrow--prev team__arrow--prev",
       next: "splide__arrow--next team__arrow--next",
+      pagination: "splide__pagination slider-main__pagination",
+      page: "splide__pagination__page slider-main__page",
+    },
+    breakpoints: {
+      1199: {
+        autoWidth: false,
+        arrows: false,
+        pagination: true,
+        start: 0,
+        focus: "left",
+      },
+      767: {
+        // fixedWidth: "330px",
+        perPage: 2,
+      },
+      478: {
+        perPage: 1,
+      },
     },
   });
   teamSlider.mount();
@@ -105,6 +127,25 @@ document.addEventListener("DOMContentLoaded", function () {
 // });
 
 document.querySelector(".current-year").innerHTML = new Date().getFullYear();
+
+//modal
+const modalOpen = document.querySelector(".modal-open");
+const modalOverlay = document.querySelector(".modal__overlay");
+const modal = document.querySelector(".modal__wrapper");
+
+modalOpen.addEventListener("click", function () {
+  modalOverlay.classList.add("modal__overlay--visible");
+  modal.style.display = "flex";
+  document.body.classList.add("locked");
+});
+
+modalOverlay.addEventListener("click", function (e) {
+  if (e.target !== modal) {
+    modalOverlay.classList.remove("modal__overlay--visible");
+    modal.style.display = "none";
+    document.body.classList.remove("locked");
+  }
+});
 
 // scroll to top
 // if (document.querySelector(".scroll-to-top") != null) {

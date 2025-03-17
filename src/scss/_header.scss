@@ -164,7 +164,7 @@
       transform: translateX(100%);
 
       &--active {
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: var(--overlay);
         transform: translateX(0);
       }
     }
