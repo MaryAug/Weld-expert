@@ -1,13 +1,13 @@
 .slider-main__pagination {
-  bottom: -60px;
-  gap: 10px;
+  bottom: 0;
+  gap: 8px;
 }
 
 .slider-main__page {
   background-color: transparent;
   border: 2px solid var(--color-gray-700);
-  width: 13px;
-  height: 13px;
+  width: 12px;
+  height: 12px;
   box-shadow: var(--shadow);
 }
 
@@ -17,7 +17,8 @@
   transform: none;
 }
 
-.slider-main-arrow {
+.slider-main-arrow,
+.slider-secondary-arrow {
   width: 80px;
   height: 80px;
   background: transparent;
@@ -33,6 +34,9 @@
   &:hover:not(:disabled) {
     opacity: 1;
   }
+}
+
+.slider-secondary-arrow {
 }
 
 @media (max-width: 999px) {

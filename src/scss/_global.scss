@@ -21,8 +21,6 @@
   --color-bg-secondary: var(--color-gray-900);
 
   --color-text-main: var(--color-black);
-  // --color-text-hover: var(--color-blue-500);
-  // --color-text-active: var(--color-blue-700);
 
   --color-secondary: var(--color-red-100);
   --color-secondary-active: var(--color-red-400);
@@ -81,6 +79,10 @@ img {
   margin-top: 50px;
   padding-top: 30px;
   padding-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 120px;
+  }
 
   &__title {
     font-size: 48px;
@@ -174,14 +176,17 @@ img {
 }
 
 .btn {
+  display: inline-block;
   padding: 20px 60px;
   border: 2px solid transparent;
   border-radius: var(--radius);
+  text-align: center;
   font-size: 16px;
   font-weight: 700;
   font-family: var(--font-family);
   color: var(--color-white);
   background-color: var(--color-secondary);
+  text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
   transition: 0.3s;
@@ -274,6 +279,11 @@ img {
   overflow: hidden;
 }
 
+.centered {
+  display: flex;
+  justify-content: center;
+}
+
 @media (max-width: 1199px) {
   .section {
     &__subhead {
@@ -356,6 +366,10 @@ img {
 }
 
 @media (max-width: 479px) {
+  body {
+    font-size: 14px;
+  }
+
   .section {
     &__title {
       font-size: 20px;
@@ -379,6 +393,11 @@ img {
 
   .btn {
     padding: 15px 45px;
+    width: 100%;
+  }
+
+  .centered {
+    display: block;
   }
 }
 

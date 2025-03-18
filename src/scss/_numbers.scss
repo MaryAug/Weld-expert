@@ -1,8 +1,7 @@
 .numbers {
   position: relative;
   background-image: url("../img/numbers-back.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-repeat: repeat-x;
 
   &::after {
     position: absolute;

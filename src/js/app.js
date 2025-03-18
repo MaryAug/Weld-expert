@@ -99,7 +99,6 @@ document.addEventListener("DOMContentLoaded", function () {
         focus: "left",
       },
       767: {
-        // fixedWidth: "330px",
         perPage: 2,
       },
       478: {
@@ -108,6 +107,40 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
   teamSlider.mount();
+});
+
+//news-slider
+document.addEventListener("DOMContentLoaded", function () {
+  const newsSlider = new Splide(".news-slider__slider", {
+    type: "loop",
+    arrows: true,
+    pagination: false,
+    perPage: 3,
+    perMove: 1,
+    gap: "var(--gap)",
+    classes: {
+      arrows: "splide__arrows news-slider__arrows",
+      arrow: "splide__arrow news-slider-slider__arrow slider-secondary-arrow",
+      prev: "splide__arrow--prev news-slider__arrow--prev",
+      next: "splide__arrow--next news-slider__arrow--next",
+      pagination: "splide__pagination slider-main__pagination",
+      page: "splide__pagination__page slider-main__page",
+    },
+    breakpoints: {
+      999: {
+        arrows: false,
+        pagination: true,
+        perPage: 1,
+      },
+      //   767: {
+      //     perPage: 2,
+      //   },
+      //   478: {
+      //     perPage: 1,
+      //   },
+    },
+  });
+  newsSlider.mount();
 });
 
 // const elements = document.querySelectorAll(".form__input--tel");
@@ -172,11 +205,3 @@ modalOverlay.addEventListener("click", function (e) {
 // }
 
 flsFunctions.accordion();
-
-// flsFunctions.bindModal(
-//   ".open-modal-callback",
-//   ".modal--callback",
-//   ".modal__close"
-// );
-
-// flsFunctions.bindModal(".open-modal-order", ".modal--order", ".modal__close");

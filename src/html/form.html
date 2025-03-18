@@ -1,48 +1,53 @@
 <section class="form section">
   <div class="container">
-    <form action="/" method="post" class="form form--row">
-      <div class="form__text">
-        <p>Не&nbsp;нашли свой вопрос?</p>
-        <p>Оставьте заявку и&nbsp;мы&nbsp;поможем!</p>
+    <form action="/" method="post" class="form__wrapper">
+      <div class="form__title">
+        <span class="text--red">Расскажите о задаче</span> и мы ее решим
       </div>
-      <div class="form__col">
-        <div class="form__group">
+      <div class="form__inner">
+        <div class="form__block">
+          <label for="form-name" class="form__subhead">Ваше имя</label>
           <input
-            type="text"
+            type="name"
+            id="form-name"
             class="form__input"
-            name="name"
-            placeholder="Имя"
+            placeholder="Введите имя"
             required
           />
         </div>
-        <div class="form__group">
+        <div class="form__block">
+          <label for="form-tel" class="form__subhead">Номер телефона</label>
           <input
             type="tel"
-            name="tel"
-            class="form__input form__input--tel"
-            placeholder="+_(___)-___-__-__"
+            id="form-tel"
+            class="form__input"
+            placeholder="+7(___)___-__-__"
             required
           />
         </div>
-      </div>
-      <div class="form__col">
-        <div class="form__group">
-          <input
-            type="file"
-            name="file"
-            accept=""
-            class="form__file-input"
-            id="form-help-file"
-          />
-          <label class="form__file-label" for="form-help-file"></label>
+        <div class="form__block">
+          <label for="form-text" class="form__subhead">Задача</label>
+          <textarea
+            id="form-text"
+            class="form__input"
+            rows="3"
+            placeholder="Начните вводить текст"
+          ></textarea>
         </div>
-
-        <input
-          class="form__btn btn"
-          type="submit"
-          value="Получить консультацию"
-        />
+        <div class="form__row">
+          <label class="form__checkbox-block">
+            <input type="checkbox" class="form__checkbox" checked="checked" />
+            <span class="form__checkmark"></span>
+            <p class="form__policy">
+              Я даю согласие на обработку моих
+              <span class="text--gray"
+                ><a href="#" class="form__link"> персональных данных</a></span
+              >
+            </p>
+          </label>
+        </div>
       </div>
+      <input type="submit" class="btn form__btn" value="Рассказать о задаче" />
     </form>
   </div>
 </section>
