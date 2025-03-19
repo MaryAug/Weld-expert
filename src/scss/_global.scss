@@ -77,8 +77,9 @@ img {
 
 .section {
   margin-top: 50px;
+  margin-bottom: 90px;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 27px; //height of the background image "line-back"
 
   &:last-child {
     margin-bottom: 120px;
@@ -102,29 +103,108 @@ img {
 
 .container {
   margin: 0 auto;
-  padding: 0 var(--gap);
+  padding: 0 30px;
   max-width: calc(var(--container-width) + (var(--gap) * 2));
 
-  &--robotics {
+  &--expert,
+  &--distributor,
+  &--robotics,
+  &--form-block {
     position: relative;
-    padding-right: 0;
-    margin-right: 0;
-    margin-left: 2%;
-    max-width: initial;
+    max-width: calc(100% - ((100% - var(--container-width)) / 2) + var(--gap));
+    padding: 0 0 0 30px;
+    margin: 0 0 0 auto;
     overflow: hidden;
+  }
+
+  &--expert {
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 34%;
+      width: 32%;
+      height: 70%;
+      background-image: url("../img/expert-man-left.png");
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: contain;
+      z-index: 1;
+    }
 
     &::after {
       position: absolute;
+      content: "";
+      bottom: 0;
+      right: 0;
+      width: 33%;
+      height: 95%;
+      background-image: url("../img/expert-man-right.png");
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-size: contain;
+      z-index: 1;
+    }
+  }
+
+  &--distributor {
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -20px;
+      right: -5%;
+      width: 35%;
+      height: 90%;
+      background-image: url("../img/distr-man-right.png");
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-size: contain;
+    }
+  }
+
+  &--robotics {
+    &::after {
+      position: absolute;
       bottom: 120px;
-      right: -20%;
+      right: -6%;
       content: "";
       background-image: url("../img/robotics-img.png");
       background-position: right bottom;
       background-repeat: no-repeat;
       background-size: contain;
-      width: 1024px;
+      width: 824px;
       height: 1082px;
       z-index: 1;
+    }
+  }
+
+  &--form-block {
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: -4px;
+      left: -3%;
+      width: 45%;
+      height: 95%;
+      background-image: url("../img/form-man-left.svg");
+      background-position: left bottom;
+      background-repeat: no-repeat;
+      background-size: contain;
+      z-index: 0;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -4px;
+      right: -12%;
+      width: 40%;
+      height: 90%;
+      background-image: url("../img/form-man-right.svg");
+      background-position: right bottom;
+      background-repeat: no-repeat;
+      background-size: contain;
+      z-index: 2;
     }
   }
 }
@@ -138,6 +218,9 @@ img {
 
   &--red {
     color: var(--color-secondary);
+  }
+
+  &--gray {
   }
 }
 
@@ -284,6 +367,24 @@ img {
   justify-content: center;
 }
 
+@media (max-width: 1815px) {
+  .container {
+    &--distributor {
+      overflow: hidden;
+    }
+  }
+}
+
+@media (max-width: 1439px) {
+  .container {
+    &--robotics {
+      &::after {
+        right: -20%;
+      }
+    }
+  }
+}
+
 @media (max-width: 1199px) {
   .section {
     &__subhead {
@@ -292,10 +393,21 @@ img {
   }
 
   .container {
-    &--robotics {
-      margin: 0 auto;
-      padding: 0 var(--gap);
+    &--expert,
+    &--distributor,
+    &--robotics,
+    &--form-block {
+      padding-right: 30px;
+    }
 
+    &--distributor {
+      &::after {
+        right: -10%;
+        height: 70%;
+      }
+    }
+
+    &--robotics {
       &::after {
         top: 20px;
         right: -14%;
@@ -303,6 +415,18 @@ img {
         height: 1040px;
         background-position: right top;
         z-index: 0;
+      }
+    }
+
+    &--form-block {
+      &::before {
+        right: -2%;
+        left: auto;
+        background-position: right bottom;
+        transform: scale(-1, 1);
+      }
+      &::after {
+        opacity: 0;
       }
     }
   }
@@ -315,6 +439,25 @@ img {
       padding-bottom: 40px;
     }
   }
+
+  .container {
+    &--expert {
+      &::after {
+        height: 81%;
+      }
+
+      &::before {
+        left: 34%;
+        height: 60%;
+      }
+    }
+
+    &--distributor {
+      &::after {
+        height: 265px;
+      }
+    }
+  }
 }
 
 @media (max-width: 767px) {
@@ -325,11 +468,33 @@ img {
   }
 
   .container {
+    &--expert {
+      &::before {
+        left: 25%;
+        height: 55%;
+        width: 40%;
+      }
+    }
     &--robotics {
       &::after {
         top: 40px;
         height: 611px;
         width: 460px;
+      }
+    }
+
+    &--distributor {
+      &::after {
+        bottom: -5px;
+        left: 20px;
+        height: 115px;
+        background-position: left bottom;
+      }
+    }
+
+    &--form-block {
+      &::before {
+        opacity: 0;
       }
     }
   }
@@ -371,6 +536,8 @@ img {
   }
 
   .section {
+    margin-bottom: 60px;
+
     &__title {
       font-size: 20px;
       padding-bottom: 30px;
@@ -383,6 +550,14 @@ img {
   }
 
   .container {
+    padding: 0 20px;
+
+    &--distributor {
+      &::after {
+        opacity: 0;
+      }
+    }
+
     &--robotics {
       &::after {
         left: -34%;
@@ -403,6 +578,18 @@ img {
 
 @media (max-width: 359px) {
   .container {
+    padding: 0 15px;
+
+    &--expert {
+      &::before {
+        left: 7%;
+      }
+
+      &--after {
+        width: 41%;
+      }
+    }
+
     &--robotics {
       &::after {
         bottom: 320px;

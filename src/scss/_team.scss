@@ -1,14 +1,6 @@
 .team {
-  padding-bottom: 40px;
-
   &__slider {
     padding-bottom: 50px;
-  }
-
-  &__arrow {
-  }
-
-  &__arrows {
   }
 
   &__arrow--prev {
@@ -19,18 +11,12 @@
     right: 0;
   }
 
-  &__arrow-img {
-  }
-
   &__slide {
     position: relative;
   }
 
   &__img {
     height: 100%;
-  }
-
-  &__person {
   }
 }
 
@@ -53,9 +39,6 @@
     gap: 40px;
   }
 
-  &__info {
-  }
-
   &__name {
     padding-bottom: 5px;
     font-size: 36px;
@@ -64,12 +47,8 @@
     color: var(--color-secondary);
   }
 
-  &__post {
-  }
-
   &__text {
     margin: 0;
-
     font-weight: 600;
   }
 

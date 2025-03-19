@@ -132,32 +132,18 @@ document.addEventListener("DOMContentLoaded", function () {
         pagination: true,
         perPage: 1,
       },
-      //   767: {
-      //     perPage: 2,
-      //   },
-      //   478: {
-      //     perPage: 1,
-      //   },
     },
   });
   newsSlider.mount();
 });
 
-// const elements = document.querySelectorAll(".form__input--tel");
-// const maskOptions = {
-//   mask: "+{7} (000) 000-00-00",
-// };
-// elements.forEach((element) => {
-//   const mask = IMask(element, maskOptions);
-// });
-
-// const fileInputs = document.querySelectorAll(".form__file-input");
-// fileInputs.forEach((input) => {
-//   input.addEventListener("change", function (e) {
-//     let fileName = this.value.split("\\").pop();
-//     this.nextElementSibling.innerHTML = fileName;
-//   });
-// });
+const elements = document.querySelectorAll(".form__input--tel");
+const maskOptions = {
+  mask: "+{7} (000) 000-00-00",
+};
+elements.forEach((element) => {
+  const mask = IMask(element, maskOptions);
+});
 
 document.querySelector(".current-year").innerHTML = new Date().getFullYear();
 

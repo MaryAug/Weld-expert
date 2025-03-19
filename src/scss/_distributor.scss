@@ -1,6 +1,6 @@
 .distributor {
   position: relative;
-  background-image: url("../img/distributor-back.jpg");
+  background-image: url("../img/line-back.jpg");
   background-repeat: repeat-x;
   background-position: bottom;
 
@@ -15,22 +15,12 @@
     background-repeat: no-repeat;
   }
 
-  &::after {
-    position: absolute;
-    content: "";
-    bottom: 10px;
-    right: 0;
-    width: 35%;
-    height: 80%;
-    background-image: url("../img/distr-man-right.png");
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-size: contain;
-    transform: translateX(15%);
+  &__title {
+    padding-right: 50px;
   }
 
   &__inner {
-    margin-right: 5%;
+    margin-right: 10%;
     padding-bottom: 90px;
   }
 
@@ -76,13 +66,17 @@
       background-size: contain;
     }
 
-    &::after {
-      transform: translateX(20%);
-    }
-
     &__title,
     &__inner {
       margin-left: 15%;
+    }
+
+    &__inner {
+      margin-right: auto;
+    }
+
+    &__title {
+      padding-right: 0;
     }
 
     &__list {
@@ -109,6 +103,7 @@
 
     &__inner {
       padding-bottom: 150px;
+      margin-right: 10%;
     }
 
     &__list {
@@ -122,7 +117,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .distributor {
     &::before {
       right: 0;
@@ -130,13 +125,6 @@
       height: 305px;
       background-position: right bottom;
       transform: scale(-1, 1);
-    }
-
-    &::after {
-      bottom: 25px;
-      left: 0;
-      height: 115px;
-      background-position: left bottom;
     }
 
     &__inner,
