@@ -8,12 +8,15 @@
   border: 2px solid var(--color-gray-700);
   width: 12px;
   height: 12px;
+  -webkit-box-shadow: var(--shadow);
   box-shadow: var(--shadow);
 }
 
 .slider-main__page.is-active {
   border: var(---color-secondary);
   background-color: var(--color-secondary);
+  -webkit-transform: none;
+  -ms-transform: none;
   transform: none;
 }
 
@@ -25,6 +28,8 @@
   border: 2px solid transparent;
   border-radius: 0;
   opacity: 1;
+  -webkit-transition: ease-out 0.3s;
+  -o-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
 
   &:hover {

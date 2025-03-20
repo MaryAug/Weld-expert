@@ -82,6 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     clones: 0,
     focus: "center",
     gap: "var(--gap)",
+    speed: 1100,
     classes: {
       arrows: "splide__arrows team__arrows",
       arrow: "splide__arrow team-slider__arrow slider-main-arrow",
@@ -118,6 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
     perPage: 3,
     perMove: 1,
     gap: "var(--gap)",
+    speed: 1100,
     classes: {
       arrows: "splide__arrows news-slider__arrows",
       arrow: "splide__arrow news-slider-slider__arrow slider-secondary-arrow",
@@ -137,15 +139,35 @@ document.addEventListener("DOMContentLoaded", function () {
   newsSlider.mount();
 });
 
-const elements = document.querySelectorAll(".form__input--tel");
-const maskOptions = {
-  mask: "+{7} (000) 000-00-00",
-};
-elements.forEach((element) => {
-  const mask = IMask(element, maskOptions);
-});
+//map-points
+const mapClose = document.querySelector(".map__backgroud");
+const mapLinks = document.querySelectorAll(".map__point");
+for (let i = 0; i < mapLinks.length; i++) {
+  const mapLink = mapLinks[i];
+  const targetId = mapLink.getAttribute("aria-controls");
+  const targetElement = document.getElementById(targetId);
 
-document.querySelector(".current-year").innerHTML = new Date().getFullYear();
+  mapLink.addEventListener("click", (event) => {
+    mapLink.classList.toggle("active");
+    mapLink.setAttribute(
+      "aria-expanded",
+      mapLink.classList.contains("active") ? "true" : "false"
+    );
+
+    const x = event.clientX;
+    const y = event.clientY;
+
+    if (mapLink.classList.contains("active")) {
+      targetElement.style.top = `${x}px`;
+      targetElement.style.left = `${y}px`;
+      targetElement.style.opacity = 1;
+      targetElement.style.visibility = "visible";
+    } else {
+      targetElement.style.opacity = 0;
+      targetElement.style.visibility = "hidden";
+    }
+  });
+}
 
 //modal
 const modalOpen = document.querySelector(".modal-open");
@@ -165,6 +187,16 @@ modalOverlay.addEventListener("click", function (e) {
     document.body.classList.remove("locked");
   }
 });
+
+const elements = document.querySelectorAll(".form__input--tel");
+const maskOptions = {
+  mask: "+{7} (000) 000-00-00",
+};
+elements.forEach((element) => {
+  const mask = IMask(element, maskOptions);
+});
+
+document.querySelector(".current-year").innerHTML = new Date().getFullYear();
 
 // scroll to top
 // if (document.querySelector(".scroll-to-top") != null) {

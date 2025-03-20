@@ -161,6 +161,8 @@
       height: 54%;
       width: 94%;
       background-position: left top;
+      -webkit-transform: scale(1, -1);
+      -ms-transform: scale(1, -1);
       transform: scale(1, -1);
     }
 

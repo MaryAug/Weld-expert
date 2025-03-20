@@ -1,0 +1,193 @@
+.map {
+  line-height: 1;
+
+  &__title {
+    max-width: 525px;
+    padding-bottom: 0;
+  }
+
+  &__container {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    padding: 0 30px;
+    max-width: calc(var(--container-width) + (var(--gap) * 2));
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__card {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: var(--radius);
+    -webkit-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.3s, visibility 0.3s;
+    -o-transition: opacity 0.3s, visibility 0.3s;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 1;
+  }
+
+  &__img {
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+    height: 180px;
+    width: 100%;
+    background-color: var(--color-gray-400);
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  &__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: var(--gap);
+    padding: 30px 30px 20px 20px;
+    background-color: var(--color-gray-100);
+  }
+
+  &__subhead {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  &__text {
+    margin: 0;
+  }
+
+  &__address,
+  &__work-hours {
+    position: relative;
+    padding-left: 38px;
+  }
+
+  &__address {
+    font-style: normal;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 8px;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      background-image: url("../img/map.svg");
+    }
+  }
+
+  &__work-hours {
+    &::before {
+      position: absolute;
+      content: "";
+      top: 8px;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      background-image: url("../img/works.svg");
+    }
+  }
+
+  &__tel {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    font-weight: 700;
+    color: var(--color-secondary);
+
+    &:hover {
+      color: var(--color-red-400);
+    }
+    &:active {
+      color: var(--color-red-200);
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .map {
+    &__card {
+      max-width: 280px;
+    }
+    &__img {
+      height: 150px;
+    }
+    &__inner {
+      padding-top: 20px;
+      padding-right: 20px;
+    }
+
+    &__subhead {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 999px) {
+  .map {
+    &__card {
+      max-width: 230px;
+    }
+    &__img {
+      height: 120px;
+    }
+    &__subhead {
+      font-size: 15px;
+    }
+    &__address,
+    &__work-hours {
+      padding-left: 33px;
+    }
+
+    &__text,
+    &__tel {
+      font-size: 15px;
+    }
+    &__title {
+      max-width: 330px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .map {
+    &__title {
+      max-width: 245px;
+    }
+
+    &__point {
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .map {
+    &__title {
+      font-size: 15px;
+      max-width: 145px;
+    }
+  }
+}
+@media (max-width: 359px) {
+  .map {
+    &__title {
+      font-size: 13px;
+    }
+  }
+}

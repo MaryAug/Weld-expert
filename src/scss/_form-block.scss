@@ -9,7 +9,7 @@
     position: absolute;
     content: "";
     top: 0;
-    background-image: url("../img/numbers-back.svg");
+    background-image: url("../img/top-back.svg");
     background-repeat: repeat-x;
     background-position: top;
     width: 100%;
@@ -19,9 +19,18 @@
 
   &__wrapper {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     gap: 40px;
     max-width: 790px;
@@ -39,7 +48,12 @@
     font-weight: 700;
   }
   &__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: var(--gap);
     width: 100%;

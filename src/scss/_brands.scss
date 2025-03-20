@@ -1,7 +1,13 @@
 .brands {
   &__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     gap: 10px;
   }
@@ -14,13 +20,19 @@
 @media (max-width: 768px) {
   .brands {
     &__wrapper {
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      -webkit-column-gap: 15px;
+      -moz-column-gap: 15px;
       column-gap: 15px;
       row-gap: 5px;
     }
 
     &__logo {
+      -ms-flex-preferred-size: 63px;
       flex-basis: 63px;
       max-width: 64px;
     }

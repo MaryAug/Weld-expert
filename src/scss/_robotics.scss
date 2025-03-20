@@ -9,6 +9,7 @@
     background-color: var(--color-bg);
     width: 100%;
     height: 131px;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 0px 100%, 0 0px);
     clip-path: polygon(0 0, 100% 0%, 0px 100%, 0 0px);
   }
 
@@ -19,12 +20,17 @@
     background-color: var(--color-bg);
     width: 100%;
     height: 131px;
+    -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%);
     clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%);
   }
 
   &__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 60px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding-top: 220px;
     padding-bottom: 185px;
@@ -55,7 +61,12 @@
   }
 
   &__list-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 10px;
     margin: 0;
@@ -72,20 +83,31 @@
   }
 
   &__btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 30px;
   }
 
   &__adv-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 10px;
   }
 
   &__adv-item {
     position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 25px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 25px 50px 25px 20px;
     max-width: 385px;
@@ -111,7 +133,12 @@
 @media (max-width: 1199px) {
   .robotics {
     &__wrapper {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
       align-items: flex-start;
       gap: 100px;
       padding-top: 100px;
@@ -125,12 +152,19 @@
     }
 
     &__adv-list {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
       flex-flow: row wrap;
       row-gap: 20px;
+      -webkit-column-gap: 10px;
+      -moz-column-gap: 10px;
       column-gap: 10px;
     }
 
     &__adv-item {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 280px;
       flex: 1 1 280px;
       z-index: 1;
     }
@@ -174,6 +208,8 @@
     }
 
     &__adv-list {
+      -webkit-column-gap: 20px;
+      -moz-column-gap: 20px;
       column-gap: 20px;
     }
   }
@@ -182,19 +218,33 @@
 @media (max-width: 649px) {
   .robotics {
     &__wrapper {
+      -webkit-box-align: initial;
+      -ms-flex-align: initial;
       align-items: initial;
     }
     &__btns {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-align: end;
+      -ms-flex-align: end;
       align-items: end;
       gap: var(--gap);
     }
 
     &__adv-list {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
       flex-flow: column nowrap;
+      -webkit-box-align: end;
+      -ms-flex-align: end;
       align-items: end;
     }
     &__adv-item {
+      -webkit-box-flex: 1;
+      -ms-flex: auto;
       flex: auto;
       width: 385px;
     }
@@ -227,6 +277,8 @@
     }
 
     &__btns {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
     }
   }
@@ -244,6 +296,8 @@
     }
 
     &__adv-list {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
     }
 

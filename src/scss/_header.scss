@@ -14,15 +14,27 @@
   }
 
   &__rightside {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     gap: 10px;
   }
 
   &__icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: flex-end;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     gap: 15px;
   }
@@ -43,14 +55,24 @@
 }
 
 .menu {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 3fr 40px 1fr 40px 3fr;
   grid-template-columns: 3fr 1fr 3fr;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 40px;
 
   &__left {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
     gap: 40px;
   }
@@ -62,8 +84,14 @@
   }
 
   &__right {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
     gap: 40px;
   }
@@ -74,13 +102,21 @@
   content: "";
   top: 80%;
   padding: 20px 25px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 10px;
   background-color: var(--color-gray-50);
+  -webkit-box-shadow: var(--shadow);
   box-shadow: var(--shadow);
   border-bottom-right-radius: var(--radius);
   border-bottom-left-radius: var(--radius);
+  -webkit-transition: opacity 0.3s, visibility 0.3s;
+  -o-transition: opacity 0.3s, visibility 0.3s;
   transition: opacity 0.3s, visibility 0.3s;
   opacity: 0;
   visibility: hidden;
@@ -94,6 +130,8 @@
 
 .link--dropdown.active::after {
   top: 4px;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
@@ -135,9 +173,15 @@
   }
 
   .header-mob {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 40px 1fr 40px 1fr;
     grid-template-columns: repeat(3, 1fr);
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     gap: 35px;
 
@@ -146,8 +190,14 @@
     }
 
     &__rightside {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
       justify-content: end;
       gap: 40px;
     }
@@ -155,18 +205,28 @@
     &__burger {
       position: fixed;
       inset: 0;
+      -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
       transform: translateX(100%);
 
       &--active {
         background-color: var(--overlay);
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
         transform: translateX(0);
       }
     }
   }
 
   .menu-trigger {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     width: 37px;
     height: 37px;
@@ -181,6 +241,8 @@
       width: 24px;
       height: 2.5px;
       background-color: var(--color-secondary);
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
       transition: 0.3s;
 
       &::before,
@@ -191,14 +253,20 @@
         height: 2.5px;
         background-color: var(--color-secondary);
         left: 0;
+        -webkit-transition: ease-in-out 0.3s;
+        -o-transition: ease-in-out 0.3s;
         transition: ease-in-out 0.3s;
       }
       &::before {
         top: 0;
+        -webkit-transform: translateY(-6px);
+        -ms-transform: translateY(-6px);
         transform: translateY(-6px);
       }
       &::after {
         bottom: 0;
+        -webkit-transform: translateY(6px);
+        -ms-transform: translateY(6px);
         transform: translateY(6px);
       }
     }
@@ -207,9 +275,13 @@
       .menu-trigger__icon {
         background-color: transparent;
         &::after {
+          -webkit-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
         }
         &::before {
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
           transform: rotate(45deg);
         }
       }
@@ -221,16 +293,27 @@
     right: 0;
     top: 0;
     bottom: 0;
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
     transform: translateX(100%);
     border-bottom-left-radius: var(--radius);
 
     &__list,
     &__add {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
       justify-content: flex-start;
       gap: var(--gap);
       padding-bottom: 40px;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
       transition: 0.3s;
     }
 
@@ -266,18 +349,24 @@
       width: 100%;
       height: 100%;
       background-color: var(--color-white);
+      -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
       transform: translateX(0);
       z-index: 3;
     }
 
-    &__link,
-    &__link--drop {
+    &__link {
       font-family: var(--second-family);
       font-weight: 700;
+
+      &--drop {
+      }
     }
   }
 
   .mob-submenu {
+    -webkit-transition: opacity 0.3s, visibility 0.3s;
+    -o-transition: opacity 0.3s, visibility 0.3s;
     transition: opacity 0.3s, visibility 0.3s;
     line-height: 0;
     opacity: 0;
@@ -294,7 +383,12 @@
   }
 
   .link--dropdown.active ~ .mob-submenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 10px;
     padding-top: 20px;
