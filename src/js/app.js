@@ -34,13 +34,9 @@ burgerBtn.addEventListener("click", (e) => {
   burgerBack.classList.toggle("header-mob__burger--active");
   document.body.classList.toggle("locked");
 
-  menu.addEventListener("click", (e) => {
+  burgerBack.addEventListener("click", (e) => {
     console.log(e.target);
-    if (
-      e.target == menu ||
-      e.target.classList.contains("mob-menu__link") ||
-      e.target.classList.contains("mob-submenu__link")
-    ) {
+    if (e.target == burgerBack) {
       burgerBtn.classList.remove("menu-trigger--is-open");
       menu.classList.remove("mob-menu--is-open");
       burgerBack.classList.remove("header-mob__burger--active");
@@ -56,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     arrows: true,
     pagination: false,
     perPage: 1,
+    cover: true,
     autoplay: true,
     interval: 5000,
     speed: 1100,
@@ -75,14 +72,10 @@ document.addEventListener("DOMContentLoaded", function () {
     type: "loop",
     arrows: true,
     pagination: false,
-    autoWidth: true,
-    start: 1,
     perPage: 3,
     perMove: 1,
-    clones: 0,
-    focus: "center",
     gap: "var(--gap)",
-    speed: 1100,
+    speed: 800,
     classes: {
       arrows: "splide__arrows team__arrows",
       arrow: "splide__arrow team-slider__arrow slider-main-arrow",
@@ -139,49 +132,72 @@ document.addEventListener("DOMContentLoaded", function () {
   newsSlider.mount();
 });
 
-//map-points
-const mapClose = document.querySelector(".map__backgroud");
-const mapLinks = document.querySelectorAll(".map__point");
-for (let i = 0; i < mapLinks.length; i++) {
-  const mapLink = mapLinks[i];
-  const targetId = mapLink.getAttribute("aria-controls");
-  const targetElement = document.getElementById(targetId);
-
-  mapLink.addEventListener("click", (event) => {
-    mapLink.classList.toggle("active");
-    mapLink.setAttribute(
-      "aria-expanded",
-      mapLink.classList.contains("active") ? "true" : "false"
-    );
-
-    const x = event.clientX;
-    const y = event.clientY;
-
-    if (mapLink.classList.contains("active")) {
-      targetElement.style.top = `${x}px`;
-      targetElement.style.left = `${y}px`;
-      targetElement.style.opacity = 1;
-      targetElement.style.visibility = "visible";
-    } else {
-      targetElement.style.opacity = 0;
-      targetElement.style.visibility = "hidden";
-    }
+//robotization-slider
+document.addEventListener("DOMContentLoaded", function () {
+  const robotizationSlider = new Splide(".robotization-slider__slider", {
+    type: "loop",
+    arrows: true,
+    pagination: false,
+    perPage: 1,
+    cover: true,
+    autoplay: true,
+    interval: 5000,
+    speed: 1100,
+    classes: {
+      arrows: "splide__arrows robotization-slider__arrows",
+      arrow: "splide__arrow robotization-slider__arrow slider-main-arrow",
+      prev: "splide__arrow--prev robotization-slider__arrow--prev",
+      next: "splide__arrow--next robotization-slider__arrow--next",
+    },
   });
-}
+  robotizationSlider.mount();
+});
+
+//map-points
+// const mapLinks = document.querySelectorAll(".map__point");
+// for (let i = 0; i < mapLinks.length; i++) {
+//   const mapLink = mapLinks[i];
+//   const targetId = mapLink.getAttribute("aria-controls");
+//   const targetElement = document.getElementById(targetId);
+
+//   mapLink.addEventListener("click", (event) => {
+//     event.preventDefault();
+//     mapLink.classList.toggle("active");
+//     mapLink.setAttribute(
+//       "aria-expanded",
+//       mapLink.classList.contains("active") ? "true" : "false"
+//     );
+
+//     const x = event.clientX;
+//     const y = event.clientY;
+
+//     if (mapLink.classList.contains("active")) {
+//       targetElement.style.top = `${x}px`;
+//       targetElement.style.left = `${y}px`;
+//       targetElement.style.opacity = 1;
+//       targetElement.style.visibility = "visible";
+//     } else {
+//       targetElement.style.opacity = 0;
+//       targetElement.style.visibility = "hidden";
+//     }
+//   });
+// }
 
 //modal
-const modalOpen = document.querySelector(".modal-open");
+const modalsOpen = document.querySelectorAll(".modal-open");
 const modalOverlay = document.querySelector(".modal__overlay");
 const modal = document.querySelector(".modal__wrapper");
 
-modalOpen.addEventListener("click", function () {
-  modalOverlay.classList.add("modal__overlay--visible");
-  modal.style.display = "flex";
-  document.body.classList.add("locked");
-});
+for (let modalOpen of modalsOpen) {
+  modalOpen.addEventListener("click", function () {
+    modalOverlay.classList.add("modal__overlay--visible");
+    modal.style.display = "flex";
+    document.body.classList.add("locked");
+  });
+}
 
 modalOverlay.addEventListener("click", function (e) {
-  if (e.target !== modal) {
+  if (e.target == modalOverlay) {
     modalOverlay.classList.remove("modal__overlay--visible");
     modal.style.display = "none";
     document.body.classList.remove("locked");

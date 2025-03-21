@@ -62,12 +62,19 @@ body {
   color: var(--color-text-main);
   scrollbar-gutter: stable;
   margin: 0;
+  overflow-x: hidden;
 }
 
 img {
   max-width: 100%;
   border: none;
   display: block;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .title {
@@ -107,7 +114,7 @@ img {
 
 .container {
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 40px;
   max-width: calc(var(--container-width) + (var(--gap) * 2));
 
   &--expert,
@@ -116,7 +123,7 @@ img {
   &--form-block {
     position: relative;
     max-width: calc(100% - ((100% - var(--container-width)) / 2) + var(--gap));
-    padding: 0 0 0 30px;
+    padding: 0 0 0 40px;
     margin: 0 0 0 auto;
     overflow: hidden;
   }
@@ -500,6 +507,8 @@ img {
   }
 
   .container {
+    padding: 0 20px;
+
     &--expert {
       &::before {
         left: 25%;
@@ -543,6 +552,11 @@ img {
     &__img {
       width: 130px;
     }
+  }
+
+  .btn {
+    padding: 15px 45px;
+    width: 100%;
   }
 
   .text {
@@ -590,7 +604,7 @@ img {
   }
 
   .container {
-    padding: 0 20px;
+    padding: 0 15px;
 
     &--distributor {
       &::after {
@@ -606,11 +620,6 @@ img {
     }
   }
 
-  .btn {
-    padding: 15px 45px;
-    width: 100%;
-  }
-
   .centered {
     display: block;
   }
@@ -624,8 +633,6 @@ img {
 
 @media (max-width: 359px) {
   .container {
-    padding: 0 15px;
-
     &--expert {
       &::before {
         left: 7%;

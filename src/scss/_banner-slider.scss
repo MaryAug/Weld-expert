@@ -16,10 +16,6 @@
 
   &__slide {
     position: relative;
-    background-image: url("../img/banner-slider.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     height: 100vh;
 
     &::before {
@@ -29,19 +25,10 @@
       inset: 0;
       opacity: 0.25;
     }
-
-    &--video {
-      position: relative;
-      height: 100vh;
-    }
   }
 
-  &__slide-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-height: 100%;
-    min-width: 100%;
+  &__video {
+    height: 100%;
     object-fit: cover;
   }
 
@@ -92,13 +79,17 @@
 
 @media (max-width: 1699px) {
   .banner-slider {
+    &__arrows {
+      max-width: initial; //изменено!
+    }
     &__arrow {
       &--prev {
         right: initial;
-        left: 30px;
+        left: 40px; //изменено!
       }
       &--next {
         left: initial;
+        right: 40px; //изменено!
       }
     }
   }
@@ -122,6 +113,14 @@
 
 @media (max-width: 767px) {
   .banner-slider {
+    &__arrow {
+      &--prev {
+        left: 20px; //изменено!
+      }
+      &--next {
+        right: 20px; //изменено!
+      }
+    }
     &__title {
       font-size: 48px;
     }
@@ -136,6 +135,14 @@
 
 @media (max-width: 479px) {
   .banner-slider {
+    &__arrow {
+      &--prev {
+        left: 15px; //изменено!
+      }
+      &--next {
+        right: 15px; //изменено!
+      }
+    }
     &__title {
       font-size: 40px;
     }

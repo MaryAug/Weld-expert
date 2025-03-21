@@ -1,6 +1,11 @@
 .team {
   &__slider {
     padding-bottom: 50px;
+
+    .splide__track {
+      margin: 0 auto;
+      max-width: 1200px;
+    }
   }
 
   &__arrow--prev {
@@ -109,6 +114,12 @@
   opacity: 1;
   visibility: visible;
 }
+
+// .team__slide:not(.is-active),
+// .team__slide:not(.is-prev),
+// .team__slide:not(.is-next) {
+//   opacity: 0;
+// }
 
 @media (max-width: 1199px) {
   .team__slide:active .person {

@@ -20,14 +20,21 @@
     position: relative;
   }
 
+  &__point {
+    cursor: pointer;
+    position: relative;
+
+    foreignObject {
+      overflow: visible;
+    }
+  }
+
   &__card {
     position: absolute;
-    content: "";
-    top: 0;
-    left: -100%;
-    max-width: 350px;
+    bottom: 0;
     height: auto;
     border-radius: var(--radius);
+    overflow: hidden;
     -webkit-box-shadow: var(--shadow);
     box-shadow: var(--shadow);
     opacity: 0;
@@ -38,14 +45,20 @@
     z-index: 1;
   }
 
+  @media (hover: hover) {
+    &__point:hover .map__card {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
   &__img {
-    border-top-left-radius: var(--radius);
-    border-top-right-radius: var(--radius);
     height: 180px;
     width: 100%;
     background-color: var(--color-gray-400);
     -o-object-fit: cover;
     object-fit: cover;
+    display: none;
   }
 
   &__inner {

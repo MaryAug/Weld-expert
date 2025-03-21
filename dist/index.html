@@ -11,7 +11,8 @@
 </head>
 
   <body>
-    <header class="header" id="header">
+    <div class="wrapper">
+      <header class="header" id="header">
   <div class="container">
     <div class="header__wrapper">
       <nav class="header__menu menu">
@@ -148,9 +149,9 @@
   </div>
 </header>
 
-    <main class="main">
-      <!--  -->
-      <div class="modal">
+      <main class="main">
+        <!--  -->
+        <div class="modal">
   <div class="modal__overlay">
     <div class="modal__wrapper">
       <div class="modal__title">
@@ -208,8 +209,8 @@
   </div>
 </div>
 
-      <!--  -->
-      <section class="banner-slider">
+        <!--  -->
+        <section class="banner-slider">
   <div class="splide banner-slider__slider">
     <div class="splide__arrows banner-slider__arrows">
       <button
@@ -233,12 +234,18 @@
     </div>
     <div class="splide__track">
       <ul class="splide__list">
-        <li class="splide__slide banner-slider__slide-video">
-          <video muted class="banner-slider__video" playsinline="" autoplay>
-            <source src="../video/main-video.mp4" type="video/mp4" />
-          </video>
+        <li
+          class="splide__slide banner-slider__slide"
+          data-splide-interval="162000"
+        >
+          <div class="banner-slider__inner">
+            <video muted class="banner-slider__video" playsinline="" autoplay>
+              <source src="../files/main-video.mp4" type="video/mp4" />
+            </video>
+          </div>
         </li>
         <li class="splide__slide banner-slider__slide">
+          <img src="" alt="" class="banner-slider__img" />
           <div class="banner-slider__inner">
             <div class="banner-slider__content container">
               <div class="banner-slider__title">
@@ -255,8 +262,8 @@
   </div>
 </section>
 
-      <!--  -->
-      <section class="expert section">
+        <!--  -->
+        <section class="expert section">
   <div class="container container--expert">
     <div class="expert__content">
       <div class="expert__info">
@@ -274,8 +281,8 @@
   </div>
 </section>
 
-      <!--  -->
-      <section class="numbers section">
+        <!--  -->
+        <section class="numbers section">
   <div class="container">
     <h2 class="section__title">О нас в цифрах</h2>
 
@@ -308,8 +315,8 @@
   </div>
 </section>
 
-      <!--  -->
-      <section class="distributor section">
+        <!--  -->
+        <section class="distributor section">
   <div class="container container--distributor">
     <h2 class="distributor__title section__title">
       <span class="text text--red">WeldExpert -</span> один из&nbsp;крупнейших
@@ -345,26 +352,46 @@
   </div>
 </section>
 
-      <!--  -->
-      <section class="brands section">
+        <!--  -->
+        <section class="brands section">
   <div class="container">
     <div class="brands__wrapper">
-      <img src="../img/br-esab.jpg" alt="" class="brands__logo" />
-      <img src="../img/br-svarog.jpg" alt="" class="brands__logo" />
-      <img src="../img/br-fubag.jpg" alt="" class="brands__logo" />
-      <img src="../img/br-magmaweld.jpg" alt="" class="brands__logo" />
-      <img src="../img/br-hitachi.jpg" alt="" class="brands__logo" />
-      <img src="../img/br-optrel.jpg" alt="" class="brands__logo" />
-      <img src="../img/br-teka.jpg" alt="" class="brands__logo" />
-      <img src="../img/br-gce.jpg" alt="" class="brands__logo" />
-      <img src="../img/br-most.jpg" alt="" class="brands__logo" />
-      <img src="../img/br-ac.jpg" alt="" class="brands__logo" />
+      <div class="brands__img">
+        <img src="../img/br-esab.jpg" alt="" class="brands__logo" />
+      </div>
+      <div class="brands__img">
+        <img src="../img/br-svarog.jpg" alt="" class="brands__logo" />
+      </div>
+      <div class="brands__img">
+        <img src="../img/br-fubag.jpg" alt="" class="brands__logo" />
+      </div>
+      <div class="brands__img">
+        <img src="../img/br-magmaweld.jpg" alt="" class="brands__logo" />
+      </div>
+      <div class="brands__img">
+        <img src="../img/br-hitachi.jpg" alt="" class="brands__logo" />
+      </div>
+      <div class="brands__img">
+        <img src="../img/br-optrel.jpg" alt="" class="brands__logo" />
+      </div>
+      <div class="brands__img">
+        <img src="../img/br-teka.jpg" alt="" class="brands__logo" />
+      </div>
+      <div class="brands__img">
+        <img src="../img/br-gce.jpg" alt="" class="brands__logo" />
+      </div>
+      <div class="brands__img">
+        <img src="../img/br-most.jpg" alt="" class="brands__logo" />
+      </div>
+      <div class="brands__img">
+        <img src="../img/br-ac.jpg" alt="" class="brands__logo" />
+      </div>
     </div>
   </div>
 </section>
 
-      <!--  -->
-      <section class="integration section">
+        <!--  -->
+        <section class="integration section">
   <div class="container">
     <h2 class="section__title">
       <span class="text text--red">Полный цикл интеграции</span><br />
@@ -420,8 +447,8 @@
   </div>
 </section>
 
-      <!--  -->
-      <section class="robotics section">
+        <!--  -->
+        <section class="robotics section">
   <div class="container container--robotics">
     <div class="robotics__wrapper">
       <div class="robotics__inner">
@@ -492,8 +519,8 @@
   </div>
 </section>
 
-      <!--  -->
-      <section class="team section">
+        <!--  -->
+        <section class="team section">
   <div class="container">
     <h2 class="section__title">Наша команда</h2>
     <div class="splide team__slider">
@@ -587,8 +614,8 @@
   </div>
 </section>
 
-      <!--  -->
-      <section class="news-slider section">
+        <!--  -->
+        <section class="news-slider section">
   <div class="container">
     <h2 class="section__title">Новости компании</h2>
     <div class="splide news-slider__slider">
@@ -645,11 +672,13 @@
           </li>
           <li class="splide__slide news-slider__slide">
             <article class="news-slider__card">
-              <img
-                src="../img/news-cover.jpg"
-                alt=""
-                class="news-slider__img"
-              />
+              <div class="news-slider__img-wrap">
+                <img
+                  src="../img/news-cover.jpg"
+                  alt=""
+                  class="news-slider__img"
+                />
+              </div>
               <div class="news-slider__content">
                 <div class="news-slider__info">
                   <a href="#" class="news-slider__link link"
@@ -674,11 +703,13 @@
           </li>
           <li class="splide__slide news-slider__slide">
             <article class="news-slider__card">
-              <img
-                src="../img/news-cover.jpg"
-                alt=""
-                class="news-slider__img"
-              />
+              <div class="news-slider__img-wrap">
+                <img
+                  src="../img/news-cover.jpg"
+                  alt=""
+                  class="news-slider__img"
+                />
+              </div>
               <div class="news-slider__content">
                 <div class="news-slider__info">
                   <a href="#" class="news-slider__link link"
@@ -703,11 +734,13 @@
           </li>
           <li class="splide__slide news-slider__slide">
             <article class="news-slider__card">
-              <img
-                src="../img/news-cover.jpg"
-                alt=""
-                class="news-slider__img"
-              />
+              <div class="news-slider__img-wrap">
+                <img
+                  src="../img/news-cover.jpg"
+                  alt=""
+                  class="news-slider__img"
+                />
+              </div>
               <div class="news-slider__content">
                 <div class="news-slider__info">
                   <a href="#" class="news-slider__link link"
@@ -739,17 +772,10 @@
   </div>
 </section>
 
-      <!--  -->
-      <section class="map section">
+        <!--  -->
+        <section class="map section">
   <div class="map__wrapper">
-    <svg
-      width="100%"
-      height="100%"
-      viewBox="0 0 1811 1033"
-      class="map__background"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="100%" height="100%" viewBox="0 0 1811 1033" class="map__background" fill="none" xmlns="http://www.w3.org/2000/svg">
       <linearGradient id="linear-gradient">
         <stop offset="0%" stop-color="rgb(255, 57, 67, 0.8)" />
         <stop offset="100%" stop-color="rgb(215, 3, 10, 1)" />
@@ -1996,20 +2022,9 @@
         d="M239 130C223.55 130 211 142.141 211 157.088C211 172.035 239 208.765 239 208.765C239 212.438 267 172.035 267 157.088C267 142.141 254.45 130 239 130ZM239 171.831C231.249 171.831 225.026 165.761 225.026 158.313C225.026 150.865 231.301 144.794 239 144.794C246.699 144.794 252.974 150.865 252.974 158.313C252.974 165.761 246.699 171.831 239 171.831Z"
         fill="#FE000D"
       />
-      <a href="##" class="map__point" aria-controls="msk" aria-expanded="false">
-        <circle cx="357.5" cy="374.5" r="10.5" fill="url(#linear-gradient)" />
-        <use href="#pulse" />
-      </a>
+
       <circle cx="287.5" cy="398.5" r="4.5" fill="#FE000D" />
       <circle cx="324.5" cy="398.5" r="4.5" fill="#FE000D" />
-      <a
-        href="##"
-        class="map__point"
-        aria-controls="msk-vnukovo"
-        aria-expanded="false"
-      >
-        <circle cx="390.5" cy="400.5" r="8.5" fill="url(#linear-gradient)" />
-      </a>
       <circle cx="563.5" cy="274.5" r="4.5" fill="#FE000D" />
       <circle cx="728.5" cy="351.5" r="4.5" fill="#FE000D" />
       <circle cx="507.5" cy="317.5" r="4.5" fill="#FE000D" />
@@ -2021,25 +2036,6 @@
         d="M330.32 338V353H326.38V339.48L327.26 339.58L321.46 353H317.26L311.44 339.62L312.34 339.52V353H308.4V338H314.8L320.18 350.88H318.58L323.92 338H330.32ZM339.451 353.32C337.985 353.32 336.705 353.073 335.611 352.58C334.518 352.073 333.665 351.367 333.051 350.46C332.438 349.54 332.131 348.487 332.131 347.3C332.131 346.087 332.438 345.027 333.051 344.12C333.665 343.213 334.518 342.507 335.611 342C336.705 341.493 337.985 341.24 339.451 341.24C340.905 341.24 342.178 341.493 343.271 342C344.378 342.507 345.238 343.213 345.851 344.12C346.465 345.027 346.771 346.087 346.771 347.3C346.771 348.487 346.465 349.54 345.851 350.46C345.238 351.367 344.378 352.073 343.271 352.58C342.178 353.073 340.905 353.32 339.451 353.32ZM339.451 350.3C340.118 350.3 340.685 350.18 341.151 349.94C341.631 349.7 341.998 349.353 342.251 348.9C342.505 348.447 342.631 347.913 342.631 347.3C342.631 346.66 342.505 346.12 342.251 345.68C341.998 345.227 341.631 344.88 341.151 344.64C340.685 344.4 340.118 344.28 339.451 344.28C338.785 344.28 338.211 344.4 337.731 344.64C337.251 344.88 336.885 345.227 336.631 345.68C336.378 346.12 336.251 346.653 336.251 347.28C336.251 347.907 336.378 348.447 336.631 348.9C336.885 349.353 337.251 349.7 337.731 349.94C338.211 350.18 338.785 350.3 339.451 350.3ZM362.111 348.18C362.004 349.207 361.631 350.107 360.991 350.88C360.351 351.653 359.518 352.253 358.491 352.68C357.478 353.107 356.338 353.32 355.071 353.32C353.671 353.32 352.438 353.067 351.371 352.56C350.304 352.053 349.471 351.347 348.871 350.44C348.271 349.533 347.971 348.487 347.971 347.3C347.971 346.1 348.271 345.047 348.871 344.14C349.471 343.233 350.304 342.527 351.371 342.02C352.438 341.5 353.671 341.24 355.071 341.24C356.338 341.24 357.478 341.46 358.491 341.9C359.518 342.327 360.351 342.927 360.991 343.7C361.631 344.46 362.004 345.36 362.111 346.4H358.051C357.904 345.72 357.564 345.2 357.031 344.84C356.498 344.467 355.844 344.28 355.071 344.28C354.471 344.28 353.944 344.4 353.491 344.64C353.051 344.867 352.704 345.207 352.451 345.66C352.211 346.1 352.091 346.647 352.091 347.3C352.091 347.94 352.211 348.487 352.451 348.94C352.704 349.38 353.051 349.72 353.491 349.96C353.944 350.187 354.471 350.3 355.071 350.3C355.844 350.3 356.498 350.107 357.031 349.72C357.578 349.333 357.918 348.82 358.051 348.18H362.111ZM363.725 353V341.58H367.825V349.82L366.625 349.4L372.985 341.58H377.305L367.365 353H363.725ZM373.025 353L369.765 347.42L372.845 345.26L377.625 353H373.025ZM378.289 353L379.009 347.28L378.289 341.58H387.589C388.696 341.58 389.576 341.84 390.229 342.36C390.883 342.867 391.209 343.56 391.209 344.44C391.209 345.267 390.876 345.94 390.209 346.46C389.556 346.967 388.649 347.28 387.489 347.4L387.749 346.74C389.096 346.793 390.123 347.08 390.829 347.6C391.549 348.12 391.909 348.84 391.909 349.76C391.909 350.747 391.543 351.533 390.809 352.12C390.076 352.707 389.089 353 387.849 353H378.289ZM382.229 352.14L380.649 350.46H386.489C386.929 350.46 387.256 350.367 387.469 350.18C387.696 349.98 387.809 349.707 387.809 349.36C387.809 349.04 387.689 348.78 387.449 348.58C387.223 348.367 386.856 348.26 386.349 348.26H381.449V346.14H385.869C386.283 346.14 386.596 346.047 386.809 345.86C387.023 345.673 387.129 345.427 387.129 345.12C387.129 344.813 387.029 344.567 386.829 344.38C386.643 344.193 386.349 344.1 385.949 344.1H380.669L382.229 342.44L382.889 347.28L382.229 352.14ZM403.928 353L403.408 348.88L403.948 347.3L403.408 345.72L403.928 341.58H408.168L407.448 347.28L408.168 353H403.928ZM404.888 347.3C404.702 348.5 404.328 349.553 403.768 350.46C403.222 351.367 402.522 352.073 401.668 352.58C400.828 353.073 399.868 353.32 398.788 353.32C397.668 353.32 396.682 353.073 395.828 352.58C394.988 352.073 394.328 351.367 393.848 350.46C393.368 349.54 393.128 348.487 393.128 347.3C393.128 346.087 393.368 345.027 393.848 344.12C394.328 343.213 394.988 342.507 395.828 342C396.682 341.493 397.668 341.24 398.788 341.24C399.868 341.24 400.828 341.493 401.668 342C402.522 342.493 403.228 343.193 403.788 344.1C404.348 344.993 404.715 346.06 404.888 347.3ZM397.268 347.3C397.268 347.86 397.382 348.36 397.608 348.8C397.848 349.24 398.175 349.587 398.588 349.84C399.002 350.08 399.475 350.2 400.008 350.2C400.568 350.2 401.095 350.08 401.588 349.84C402.082 349.587 402.515 349.24 402.888 348.8C403.262 348.36 403.542 347.86 403.728 347.3C403.542 346.727 403.262 346.22 402.888 345.78C402.515 345.34 402.082 344.993 401.588 344.74C401.095 344.487 400.568 344.36 400.008 344.36C399.475 344.36 399.002 344.487 398.588 344.74C398.175 344.993 397.848 345.34 397.608 345.78C397.382 346.22 397.268 346.727 397.268 347.3Z"
         fill="black"
       />
-      <a href="##" class="map__point" aria-controls="spb" aria-expanded="false">
-        <circle cx="388.5" cy="241.5" r="10.5" fill="url(#linear-gradient)" />
-      </a>
-      <a
-        href="##"
-        class="map__point"
-        aria-controls="kaliningrad"
-        aria-expanded="false"
-      >
-        <circle cx="239.5" cy="207.5" r="10.5" fill="url(#linear-gradient)" />
-      </a>
-      <a
-        href="##"
-        class="map__point"
-        aria-controls="chelyab"
-        aria-expanded="false"
-      >
-        <circle cx="571.5" cy="592.5" r="10.5" fill="url(#linear-gradient)" />
-      </a>
       <circle cx="595.5" cy="521.5" r="10.5" fill="#FE000D" />
       <circle cx="572.5" cy="153.5" r="10.5" fill="#FE000D" />
       <circle cx="1555.5" cy="432.5" r="10.5" fill="#FE000D" />
@@ -2075,167 +2071,138 @@
         d="M413.22 533V536H402.24V533H413.22ZM405.06 534.5L404.08 540.52L402.4 538.64H413.88V542H399.94L401.08 534.5L399.94 527H413.78V530.36H402.4L404.08 528.48L405.06 534.5ZM415.882 542V530.58H419.982V538.82L418.782 538.4L425.142 530.58H429.462L419.522 542H415.882ZM425.182 542L421.922 536.42L425.002 534.26L429.782 542H425.182ZM440.44 542L439.92 537.88L440.46 536.3L439.92 534.72L440.44 530.58H444.68L443.96 536.28L444.68 542H440.44ZM441.4 536.3C441.213 537.5 440.84 538.553 440.28 539.46C439.733 540.367 439.033 541.073 438.18 541.58C437.34 542.073 436.38 542.32 435.3 542.32C434.18 542.32 433.193 542.073 432.34 541.58C431.5 541.073 430.84 540.367 430.36 539.46C429.88 538.54 429.64 537.487 429.64 536.3C429.64 535.087 429.88 534.027 430.36 533.12C430.84 532.213 431.5 531.507 432.34 531C433.193 530.493 434.18 530.24 435.3 530.24C436.38 530.24 437.34 530.493 438.18 531C439.033 531.493 439.74 532.193 440.3 533.1C440.86 533.993 441.227 535.06 441.4 536.3ZM433.78 536.3C433.78 536.86 433.893 537.36 434.12 537.8C434.36 538.24 434.687 538.587 435.1 538.84C435.513 539.08 435.987 539.2 436.52 539.2C437.08 539.2 437.607 539.08 438.1 538.84C438.593 538.587 439.027 538.24 439.4 537.8C439.773 537.36 440.053 536.86 440.24 536.3C440.053 535.727 439.773 535.22 439.4 534.78C439.027 534.34 438.593 533.993 438.1 533.74C437.607 533.487 437.08 533.36 436.52 533.36C435.987 533.36 435.513 533.487 435.1 533.74C434.687 533.993 434.36 534.34 434.12 534.78C433.893 535.22 433.78 535.727 433.78 536.3ZM450.143 531.98H454.243V542H450.143V531.98ZM445.803 530.58H458.583V533.66H445.803V530.58ZM466.312 542.32C464.926 542.32 463.686 542.067 462.592 541.56C461.512 541.053 460.659 540.347 460.032 539.44C459.406 538.52 459.092 537.453 459.092 536.24C459.092 535.053 459.392 534.013 459.992 533.12C460.592 532.213 461.412 531.507 462.452 531C463.506 530.493 464.692 530.24 466.012 530.24C467.386 530.24 468.552 530.54 469.512 531.14C470.486 531.727 471.232 532.56 471.752 533.64C472.286 534.72 472.552 535.993 472.552 537.46H462.392V535H470.252L468.912 535.86C468.859 535.273 468.712 534.78 468.472 534.38C468.232 533.967 467.912 533.653 467.512 533.44C467.126 533.227 466.659 533.12 466.112 533.12C465.512 533.12 464.999 533.24 464.572 533.48C464.146 533.72 463.812 534.053 463.572 534.48C463.332 534.893 463.212 535.38 463.212 535.94C463.212 536.66 463.372 537.273 463.692 537.78C464.026 538.273 464.506 538.653 465.132 538.92C465.772 539.187 466.552 539.32 467.472 539.32C468.312 539.32 469.146 539.213 469.972 539C470.812 538.773 471.572 538.46 472.252 538.06V540.66C471.466 541.193 470.566 541.607 469.552 541.9C468.552 542.18 467.472 542.32 466.312 542.32ZM474.3 530.58H478.4V533.86L478.22 534.34V537.54L478.4 538.48V545.3H474.3V530.58ZM477.1 536.3C477.273 535.06 477.633 533.993 478.18 533.1C478.74 532.193 479.446 531.493 480.3 531C481.153 530.493 482.12 530.24 483.2 530.24C484.32 530.24 485.3 530.493 486.14 531C486.993 531.507 487.653 532.213 488.12 533.12C488.6 534.027 488.84 535.087 488.84 536.3C488.84 537.487 488.6 538.54 488.12 539.46C487.653 540.367 486.993 541.073 486.14 541.58C485.3 542.073 484.32 542.32 483.2 542.32C482.12 542.32 481.153 542.073 480.3 541.58C479.446 541.073 478.746 540.367 478.2 539.46C477.653 538.553 477.286 537.5 477.1 536.3ZM484.72 536.3C484.72 535.727 484.6 535.22 484.36 534.78C484.133 534.34 483.806 533.993 483.38 533.74C482.966 533.487 482.493 533.36 481.96 533.36C481.413 533.36 480.893 533.487 480.4 533.74C479.906 533.993 479.473 534.34 479.1 534.78C478.726 535.22 478.44 535.727 478.24 536.3C478.44 536.86 478.726 537.36 479.1 537.8C479.473 538.24 479.906 538.587 480.4 538.84C480.893 539.08 481.413 539.2 481.96 539.2C482.493 539.2 482.966 539.08 483.38 538.84C483.806 538.587 484.133 538.24 484.36 537.8C484.6 537.36 484.72 536.86 484.72 536.3ZM490.608 542V530.58H494.648V539.78L493.768 539.5L499.748 530.58H504.988V542H500.968V532.54L501.848 532.84L495.708 542H490.608ZM507.249 530.58H511.329V542H507.249V530.58ZM516.729 530.58H520.809V542H516.729V530.58ZM509.609 534.64H518.269V537.68H509.609V534.64ZM530.31 542.32C528.696 542.32 527.316 542.027 526.17 541.44C525.036 540.84 524.163 539.98 523.55 538.86C522.95 537.727 522.65 536.367 522.65 534.78C522.65 532.42 523.303 530.56 524.61 529.2C525.916 527.827 527.783 527.033 530.21 526.82C531.21 526.74 532.036 526.673 532.69 526.62C533.343 526.553 533.876 526.493 534.29 526.44C534.716 526.373 535.076 526.307 535.37 526.24C535.676 526.173 535.97 526.093 536.25 526V529.32C535.93 529.44 535.55 529.54 535.11 529.62C534.67 529.7 534.116 529.767 533.45 529.82C532.796 529.873 531.976 529.92 530.99 529.96C529.283 530.027 528.03 530.46 527.23 531.26C526.443 532.047 526.05 533.193 526.05 534.7V535.12L525.93 534.82C526.17 534.153 526.556 533.58 527.09 533.1C527.623 532.62 528.27 532.253 529.03 532C529.79 531.733 530.616 531.6 531.51 531.6C532.67 531.6 533.683 531.813 534.55 532.24C535.416 532.667 536.09 533.273 536.57 534.06C537.05 534.847 537.29 535.753 537.29 536.78C537.29 537.9 536.996 538.88 536.41 539.72C535.836 540.547 535.03 541.187 533.99 541.64C532.95 542.093 531.723 542.32 530.31 542.32ZM530.41 539.3C530.97 539.3 531.456 539.2 531.87 539C532.283 538.8 532.603 538.513 532.83 538.14C533.056 537.767 533.17 537.34 533.17 536.86C533.17 536.353 533.056 535.92 532.83 535.56C532.603 535.2 532.283 534.92 531.87 534.72C531.456 534.52 530.97 534.42 530.41 534.42C529.623 534.42 528.91 534.627 528.27 535.04C527.643 535.44 527.176 536 526.87 536.72C527.056 537.493 527.47 538.12 528.11 538.6C528.763 539.067 529.53 539.3 530.41 539.3ZM541.888 545.62C541.048 545.62 540.301 545.513 539.648 545.3C538.994 545.1 538.361 544.787 537.748 544.36V541.52C538.374 541.92 538.961 542.207 539.508 542.38C540.054 542.553 540.654 542.64 541.308 542.64C541.854 542.64 542.341 542.52 542.768 542.28C543.194 542.04 543.541 541.6 543.808 540.96L548.188 530.58H552.528L547.048 542.22C546.661 543.06 546.188 543.727 545.628 544.22C545.081 544.727 544.488 545.087 543.848 545.3C543.208 545.513 542.554 545.62 541.888 545.62ZM542.028 540.94L537.168 530.58H541.668L545.968 540.94H542.028ZM553.675 530.58H557.775V533.86L557.595 534.34V537.54L557.775 538.48V545.3H553.675V530.58ZM556.475 536.3C556.648 535.06 557.008 533.993 557.555 533.1C558.115 532.193 558.821 531.493 559.675 531C560.528 530.493 561.495 530.24 562.575 530.24C563.695 530.24 564.675 530.493 565.515 531C566.368 531.507 567.028 532.213 567.495 533.12C567.975 534.027 568.215 535.087 568.215 536.3C568.215 537.487 567.975 538.54 567.495 539.46C567.028 540.367 566.368 541.073 565.515 541.58C564.675 542.073 563.695 542.32 562.575 542.32C561.495 542.32 560.528 542.073 559.675 541.58C558.821 541.073 558.121 540.367 557.575 539.46C557.028 538.553 556.661 537.5 556.475 536.3ZM564.095 536.3C564.095 535.727 563.975 535.22 563.735 534.78C563.508 534.34 563.181 533.993 562.755 533.74C562.341 533.487 561.868 533.36 561.335 533.36C560.788 533.36 560.268 533.487 559.775 533.74C559.281 533.993 558.848 534.34 558.475 534.78C558.101 535.22 557.815 535.727 557.615 536.3C557.815 536.86 558.101 537.36 558.475 537.8C558.848 538.24 559.281 538.587 559.775 538.84C560.268 539.08 560.788 539.2 561.335 539.2C561.868 539.2 562.341 539.08 562.755 538.84C563.181 538.587 563.508 538.24 563.735 537.8C563.975 537.36 564.095 536.86 564.095 536.3ZM579.943 530.58V533.66H572.203L574.083 531.78V542H569.983V530.58H579.943Z"
         fill="black"
       />
-      <path
-        d="M570.5 593C639.333 661.167 847.8 795.7 1109 782.5"
-        stroke="#FE000D"
-        stroke-width="2"
-      />
-      <path
-        d="M572.5 593C622.333 503.167 834 357.9 1288 499.5"
-        stroke="#FE000D"
-        stroke-width="2"
-      />
-      <path
-        d="M1557 433C1298 354.167 738.2 276.1 571 592.5"
-        stroke="#FE000D"
-        stroke-width="2"
-      />
-      <path
-        d="M1592.5 857C1423.67 670 984.4 353.6 572 592"
-        stroke="#FE000D"
-        stroke-width="2"
-      />
-      <path
-        d="M1620 786.501C1407.67 605.501 898.8 312.4 570 592"
-        stroke="#FE000D"
-        stroke-width="2"
-      />
-      <path
-        d="M390.5 250.5C454.333 276.5 580.7 288.3 573.5 153.5"
-        stroke="#FE000D"
-        stroke-width="2"
-      />
-      <path
-        d="M728.5 352C625.5 378.167 413.3 392.8 388.5 242"
-        stroke="#FE000D"
-        stroke-width="2"
-      />
-      <path
-        d="M509 318.5C473.667 316.5 400.1 298.2 388.5 241"
-        stroke="#FE000D"
-        stroke-width="2"
-      />
-      <path
-        d="M563.5 274.5C511 285.167 402.5 293.6 388.5 242"
-        stroke="#FE000D"
-        stroke-width="2"
-      />
-      <path
-        d="M287 398C240.167 378.5 169.3 305.6 238.5 210"
-        stroke="#FE000D"
-        stroke-width="2"
-      />
-      <path
-        d="M357.5 374.5C301.667 367.333 200.1 324 240.5 208"
-        stroke="#FE000D"
-        stroke-width="2"
-      />
-      <path
-        d="M325 399C254.5 386 184 299 240 209"
-        stroke="#FE000D"
-        stroke-width="2"
-      />
-      <path
-        d="M240 211.5C257.833 239 312.4 283.7 388 242.5"
-        stroke="#FE000D"
-        stroke-width="2"
-      />
-      <path
-        d="M391 400.5C318.333 393.5 186.3 345.1 239.5 207.5"
-        stroke="#FE000D"
-        stroke-width="2"
-      />
+      <path d="M570.5 593C639.333 661.167 847.8 795.7 1109 782.5" stroke="#FE000D" stroke-width="2" />
+      <path d="M572.5 593C622.333 503.167 834 357.9 1288 499.5" stroke="#FE000D" stroke-width="2" />
+      <path d="M1557 433C1298 354.167 738.2 276.1 571 592.5" stroke="#FE000D" stroke-width="2" />
+      <path d="M1592.5 857C1423.67 670 984.4 353.6 572 592" stroke="#FE000D" stroke-width="2" />
+      <path d="M1620 786.501C1407.67 605.501 898.8 312.4 570 592" stroke="#FE000D" stroke-width="2" />
+      <path d="M390.5 250.5C454.333 276.5 580.7 288.3 573.5 153.5" stroke="#FE000D" stroke-width="2" />
+      <path d="M728.5 352C625.5 378.167 413.3 392.8 388.5 242" stroke="#FE000D" stroke-width="2" />
+      <path d="M509 318.5C473.667 316.5 400.1 298.2 388.5 241" stroke="#FE000D" stroke-width="2" />
+      <path d="M563.5 274.5C511 285.167 402.5 293.6 388.5 242" stroke="#FE000D" stroke-width="2" />
+      <path d="M287 398C240.167 378.5 169.3 305.6 238.5 210" stroke="#FE000D" stroke-width="2" />
+      <path d="M357.5 374.5C301.667 367.333 200.1 324 240.5 208" stroke="#FE000D" stroke-width="2" />
+      <path d="M325 399C254.5 386 184 299 240 209" stroke="#FE000D" stroke-width="2" />
+      <path d="M240 211.5C257.833 239 312.4 283.7 388 242.5" stroke="#FE000D" stroke-width="2" />
+      <path d="M391 400.5C318.333 393.5 186.3 345.1 239.5 207.5" stroke="#FE000D" stroke-width="2" />
+      <a class="map__point" aria-controls="chelyab" aria-expanded="false">
+        <circle cx="571.5" cy="592.5" r="10.5" fill="url(#linear-gradient)" />
+        <foreignobject x="571.5" y="592.5" width="350" height="auto">
+          <div class="map__card" id="chelyab">
+            <img src="" alt="" class="map__img" />
+            <div class="map__inner">
+              <div class="map__subhead">Шоурум в Челябинске</div>
+              <address class="map__text map__address">454084, пр. Победы, 160, оф. 602</address>
+              <div class="map__work-hours">
+                <p class="map__text">
+                  <span class="text text--bold">Пн-Пт</span>
+                  9.00 - 18.00
+                </p>
+                <p class="map__text">
+                  <span class="text--red text text--bold">Сб, Вс</span>
+                  - выходной
+                </p>
+              </div>
+              <a href="tel:+79177557554" class="map__tel link">+7 (917) 755 75 54</a>
+            </div>
+          </div>
+        </foreignobject>
+      </a>
+
+      <a class="map__point" aria-controls="spb" aria-expanded="false">
+        <circle cx="388.5" cy="241.5" r="10.5" fill="url(#linear-gradient)" />
+        <foreignobject x="388.5" y="241.5" width="350" height="auto">
+          <div class="map__card" id="spb">
+            <img src="" alt="" class="map__img" />
+            <div class="map__inner">
+              <div class="map__subhead">Шоурум в Санкт-Петербурге</div>
+              <address class="map__text map__address">Московское шоссе 155 кор2</address>
+              <div class="map__work-hours">
+                <p class="map__text">
+                  <span class="text text--bold">Пн-Пт</span>
+                  9.00 - 18.00
+                </p>
+                <p class="map__text">
+                  <span class="text--red text text--bold">Сб, Вс</span>
+                  - выходной
+                </p>
+              </div>
+              <a href="tel:+78122075875" class="map__tel link">+7 (812) 207 58 75</a>
+            </div>
+          </div>
+        </foreignobject>
+      </a>
+      <a class="map__point" aria-controls="msk" aria-expanded="false">
+        <circle cx="357.5" cy="374.5" r="10.5" fill="url(#linear-gradient)" />
+        <foreignobject x="357.5" y="374.5" width="350" height="auto">
+          <div class="map__card" id="msk">
+            <img src="" alt="" class="map__img" />
+            <div class="map__inner">
+              <div class="map__subhead">Шоурум в Москве</div>
+              <address class="map__text map__address">109428, ул. Стахановская, 25, строение 1</address>
+              <div class="map__work-hours">
+                <p class="map__text">
+                  <span class="text text--bold">Пн-Пт</span>
+                  9.00 - 18.00
+                </p>
+                <p class="map__text">
+                  <span class="text--red text text--bold">Сб, Вс</span>
+                  - выходной
+                </p>
+              </div>
+              <a href="tel:+74992724886" class="map__tel link">+7 (499) 272 48 86</a>
+            </div>
+          </div>
+        </foreignobject>
+      </a>
+      <a class="map__point" aria-controls="msk-vnukovo" aria-expanded="false">
+        <circle cx="390.5" cy="400.5" r="8.5" fill="url(#linear-gradient)" />
+        <foreignobject x="390.5" y="400.5" width="350" height="auto">
+          <div class="map__card" id="msk-vnukovo">
+            <img src="" alt="" class="map__img" />
+            <div class="map__inner">
+              <div class="map__subhead">Шоурум в Москве</div>
+              <address class="map__text map__address">119027, Внуково, ул. Центральная, 8Б</address>
+              <div class="map__work-hours">
+                <p class="map__text">
+                  <span class="text text--bold">Пн-Пт</span>
+                  9.00 - 18.00
+                </p>
+                <p class="map__text">
+                  <span class="text--red text text--bold">Сб, Вс</span>
+                  - выходной
+                </p>
+              </div>
+              <a href="tel:+74992724886" class="map__tel link">+7 (499) 272 48 86</a>
+            </div>
+          </div>
+        </foreignobject>
+      </a>
+      <a class="map__point" aria-controls="kaliningrad" aria-expanded="false">
+        <circle cx="239.5" cy="207.5" r="10.5" fill="url(#linear-gradient)" />
+        <foreignobject x="239.5" y="207.5" width="350" height="auto">
+          <div class="map__card" id="kaliningrad">
+            <img src="" alt="" class="map__img" />
+            <div class="map__inner">
+              <div class="map__subhead">Шоурум в Калининграде</div>
+              <address class="map__text map__address">236034, г. Калининград, ул. Дзержинского, 136</address>
+              <div class="map__work-hours">
+                <p class="map__text">
+                  <span class="text text--bold">Пн-Пт</span>
+                  9.00 - 18.00
+                </p>
+                <p class="map__text">
+                  <span class="text--red text text--bold">Сб, Вс</span>
+                  - выходной
+                </p>
+              </div>
+              <a href="tel:+74012632198" class="map__tel link">+7 (4012) 63 21 98</a>
+            </div>
+          </div>
+        </foreignobject>
+      </a>
     </svg>
-    <div class="map__card" id="kaliningrad">
-      <img src="" alt="" class="map__img" />
-      <div class="map__inner">
-        <div class="map__subhead">Шоурум в Калининграде</div>
-        <address class="map__text map__address">
-          236034, г. Калининград, ул. Дзержинского, 136
-        </address>
-        <div class="map__work-hours">
-          <p class="map__text">
-            <span class="text text--bold">Пн-Пт</span> 9.00 - 18.00
-          </p>
-          <p class="map__text">
-            <span class="text--red text text--bold">Сб, Вс</span> - выходной
-          </p>
-        </div>
-        <a href="tel:+74012632198" class="map__tel link">+7 (4012) 63 21 98</a>
-      </div>
-    </div>
-    <div class="map__card" id="spb">
-      <img src="" alt="" class="map__img" />
-      <div class="map__inner">
-        <div class="map__subhead">Шоурум в Санкт-Петербурге</div>
-        <address class="map__text map__address">
-          Московское шоссе 155 кор2
-        </address>
-        <div class="map__work-hours">
-          <p class="map__text">
-            <span class="text text--bold">Пн-Пт</span> 9.00 - 18.00
-          </p>
-          <p class="map__text">
-            <span class="text--red text text--bold">Сб, Вс</span> - выходной
-          </p>
-        </div>
-        <a href="tel:+78122075875" class="map__tel link">+7 (812) 207 58 75</a>
-      </div>
-    </div>
-    <div class="map__card" id="chelyab">
-      <img src="" alt="" class="map__img" />
-      <div class="map__inner">
-        <div class="map__subhead">Шоурум в Челябинске</div>
-        <address class="map__text map__address">
-          454084, пр. Победы, 160, оф. 602
-        </address>
-        <div class="map__work-hours">
-          <p class="map__text">
-            <span class="text text--bold">Пн-Пт</span> 9.00 - 18.00
-          </p>
-          <p class="map__text">
-            <span class="text--red text text--bold">Сб, Вс</span> - выходной
-          </p>
-        </div>
-        <a href="tel:+79177557554" class="map__tel link">+7 (917) 755 75 54</a>
-      </div>
-    </div>
-    <div class="map__card" id="msk-vnukovo">
-      <img src="" alt="" class="map__img" />
-      <div class="map__inner">
-        <div class="map__subhead">Шоурум в Москве</div>
-        <address class="map__text map__address">
-          119027, Внуково, ул. Центральная, 8Б
-        </address>
-        <div class="map__work-hours">
-          <p class="map__text">
-            <span class="text text--bold">Пн-Пт</span> 9.00 - 18.00
-          </p>
-          <p class="map__text">
-            <span class="text--red text text--bold">Сб, Вс</span> - выходной
-          </p>
-        </div>
-        <a href="tel:+74992724886" class="map__tel link">+7 (499) 272 48 86</a>
-      </div>
-    </div>
-    <div class="map__card" id="msk">
-      <img src="" alt="" class="map__img" />
-      <div class="map__inner">
-        <div class="map__subhead">Шоурум в Москве</div>
-        <address class="map__text map__address">
-          109428, ул. Стахановская, 25, строение 1
-        </address>
-        <div class="map__work-hours">
-          <p class="map__text">
-            <span class="text text--bold">Пн-Пт</span> 9.00 - 18.00
-          </p>
-          <p class="map__text">
-            <span class="text--red text text--bold">Сб, Вс</span> - выходной
-          </p>
-        </div>
-        <a href="tel:+74992724886" class="map__tel link">+7 (499) 272 48 86</a>
-      </div>
-    </div>
+
     <div class="map__container">
       <h2 class="section__title map__title">
         Работаем<br />
@@ -2246,8 +2213,8 @@
   </div>
 </section>
 
-      <!--  -->
-      <section class="contact-block section">
+        <!--  -->
+        <section class="contact-block section">
   <div class="container">
     <h2 class="section__title">
       Как <span class="text text--red">связаться</span> с нами?
@@ -2371,8 +2338,8 @@
   </div>
 </section>
 
-      <!--  -->
-      <section class="form-block section">
+        <!--  -->
+        <section class="form-block section">
   <div class="container container--form-block">
     <form action="/" method="post" class="form-block__wrapper form">
       <div class="form-block__title">
@@ -2431,8 +2398,8 @@
   </div>
 </section>
 
-    </main>
-    <footer class="footer" id="footer">
+      </main>
+      <footer class="footer" id="footer">
   <div class="container">
     <div class="footer__wrapper">
       <div class="footer__top">
@@ -2729,7 +2696,7 @@
   </div>
 </footer>
 
-
+    </div>
     <script src="
 https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
 "></script>

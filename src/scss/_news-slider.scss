@@ -54,6 +54,9 @@
     border-top-right-radius: var(--radius);
   }
 
+  &__img-wrap {
+    height: 100%;
+  }
   &__info {
     display: -webkit-box;
     display: -ms-flexbox;
