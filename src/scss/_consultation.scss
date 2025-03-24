@@ -24,13 +24,33 @@
     clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%);
   }
 
+  &__back {
+    position: relative;
+    padding-top: 150px;
+    margin-top: -150px;
+    overflow: hidden;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url("../img/consult-elem.png");
+      width: 975px;
+      height: 808px;
+      top: -7%;
+      right: -14%;
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
     row-gap: 90px;
     column-gap: 60px;
     align-items: end;
-    padding: 240px 0;
+    padding: 140px 0;
   }
 
   &__title {
@@ -40,22 +60,102 @@
   }
 
   &__btn {
-    position: relative;
     width: 100%;
     flex: 1 1 480px;
     max-width: 625px;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    z-index: 1;
+    box-shadow: 0 4px 4px 0 rgba($color: #000000, $alpha: 0.25),
+      0 0px 82px var(--color-secondary);
+  }
+}
 
-    &::after {
-      position: absolute;
-      inset: 0;
-      content: "";
-      width: 100%;
-      height: 100%;
-      background: var(--color-secondary);
-      filter: blur(82.5999984741211px);
-      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+@media (max-width: 1599px) {
+  .consultation {
+    &__back {
+      &::after {
+        top: 0%;
+        right: -32%;
+      }
+    }
+  }
+}
+@media (max-width: 1199px) {
+  .consultation {
+    &__back {
+      &::after {
+        top: -6%;
+        right: -45%;
+        width: 906px;
+        height: 745px;
+        transform: rotate(-3deg);
+      }
+    }
+    &__wrapper {
+      gap: 60px;
+      max-width: 63%;
+      padding-top: 100px;
+      padding-bottom: 95px;
+    }
+  }
+}
+
+@media (max-width: 999px) {
+  .consultation {
+    &__back {
+      &::after {
+        top: 13%;
+        right: -37%;
+        width: 620px;
+        height: 529px;
+        transform: rotate(-13deg);
+      }
+    }
+
+    &__wrapper {
+      gap: 40px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .consultation {
+    &__back {
+      &::after {
+        top: 0%;
+        right: -35%;
+        width: 589px;
+        height: 440px;
+        transform: rotate(-25deg);
+      }
+    }
+
+    &__wrapper {
+      max-width: 100%;
+      padding-top: 240px;
+      padding-bottom: 70px;
+    }
+
+    &__btn {
+      box-shadow: 0 4px 4px 0 rgba($color: #000000, $alpha: 0.25),
+        0 0px 42px var(--color-secondary);
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .consultation {
+    &__back {
+      &::after {
+        top: 2%;
+        right: -45%;
+        width: 563px;
+        height: 414px;
+        transform: rotate(-29deg);
+      }
+    }
+
+    &__wrapper {
+      row-gap: 35px;
+      padding-bottom: 95px;
     }
   }
 }

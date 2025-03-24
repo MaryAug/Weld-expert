@@ -412,6 +412,11 @@ img {
 
 @media (max-width: 1199px) {
   .section {
+    &__title {
+      font-size: 32px;
+      padding-bottom: 40px;
+    }
+
     &__subhead {
       font-size: 16px;
     }
@@ -422,7 +427,7 @@ img {
     &--distributor,
     &--robotics,
     &--form-block {
-      padding-right: 30px;
+      padding-right: 40px;
     }
 
     &--distributor {
@@ -460,16 +465,19 @@ img {
 
   .text {
     &--large {
-      font-size: 64px;
+      font-size: 48px;
     }
   }
 }
 
 @media (max-width: 999px) {
+  body {
+    font-size: 14px;
+  }
+
   .section {
     &__title {
-      font-size: 32px;
-      padding-bottom: 40px;
+      font-size: 24px;
     }
   }
 
@@ -492,17 +500,44 @@ img {
     }
   }
 
+  .logo {
+    margin: 0 auto;
+
+    &__img {
+      width: 130px;
+    }
+  }
+
+  .socials {
+    &__icon {
+      width: 39px;
+      height: 39px;
+    }
+  }
+
   .text {
     &--large {
-      font-size: 48px;
+      font-size: 36px;
     }
   }
 }
 
 @media (max-width: 767px) {
   .section {
+    margin-bottom: 60px;
+
     &__title {
-      font-size: 24px;
+      font-size: 20px;
+      padding-bottom: 30px;
+    }
+
+    &__subhead {
+      font-weight: inherit;
+      font-size: 12px;
+    }
+
+    &:last-child {
+      margin-bottom: 100px;
     }
   }
 
@@ -540,28 +575,18 @@ img {
     }
   }
 
-  .socials {
-    &__icon {
-      width: 39px;
-      height: 39px;
-    }
-  }
-
-  .logo {
-    margin: 0 auto;
-    &__img {
-      width: 130px;
-    }
-  }
-
   .btn {
     padding: 15px 45px;
     width: 100%;
   }
 
+  .centered {
+    display: block;
+  }
+
   .text {
     &--large {
-      font-size: 36px;
+      font-size: 24px;
     }
   }
 }
@@ -586,21 +611,7 @@ img {
 
 @media (max-width: 479px) {
   body {
-    font-size: 14px;
-  }
-
-  .section {
-    margin-bottom: 60px;
-
-    &__title {
-      font-size: 20px;
-      padding-bottom: 30px;
-    }
-
-    &__subhead {
-      font-weight: inherit;
-      font-size: 12px;
-    }
+    font-size: 11px;
   }
 
   .container {
@@ -620,13 +631,9 @@ img {
     }
   }
 
-  .centered {
-    display: block;
-  }
-
   .text {
     &--large {
-      font-size: 24px;
+      font-size: 20px;
     }
   }
 }
@@ -650,12 +657,6 @@ img {
         height: 630px;
         width: 480px;
       }
-    }
-  }
-
-  .text {
-    &--large {
-      font-size: 20px;
     }
   }
 }

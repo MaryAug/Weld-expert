@@ -2,6 +2,7 @@
   &__list {
     display: flex;
     gap: var(--gap);
+    padding-bottom: 50px;
   }
   &__item {
     display: flex;

@@ -1,26 +1,65 @@
 .robotization-nums {
-  display: flex;
-  justify-content: center;
-  font-weight: 700;
-  font-family: var(--second-family);
-  text-align: center;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../img/robot-num-1.png");
+    width: 44%;
+    height: 111%;
+    top: 5%;
+    left: -23%;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+  }
+
+  &__back {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-family: var(--second-family);
+    text-align: center;
+    padding-top: 80px;
+    margin-top: -80px;
+    padding-bottom: 100px;
+    margin-bottom: -100px;
+    overflow: hidden;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: -70px;
+      right: -12%;
+      width: 38%;
+      height: 69%;
+      background-image: url("../img/robot-num-2.png");
+      background-position: right top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 1;
+    }
+  }
 
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: var(--gap);
-    padding: 20px 0;
+    padding: 60px 0 120px;
   }
 
   &__item {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 50px;
     max-height: 310px;
     max-width: 655px;
-    padding: 40px 118px 50px;
+    padding: 40px 112px 50px;
     background-color: var(--color-gray-100);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
@@ -28,12 +67,35 @@
 
   &__subhead {
     font-size: 114px;
+    z-index: 2;
     &--text {
       font-size: 46px;
     }
   }
   &__text {
+    position: relative;
     font-size: 20px;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 1699px) {
+  .robotization-nums {
+    &::before {
+      top: 24%;
+      left: -24%;
+      width: 64%;
+      height: 94%;
+      transform: scale(1, -1) rotate(-62deg);
+    }
+
+    &__back {
+      &::before {
+        top: -21%;
+        height: 58%;
+        transform: rotate(-10deg);
+      }
+    }
   }
 }
 
@@ -45,8 +107,16 @@
     }
   }
 }
+
 @media (max-width: 1199px) {
   .robotization-nums {
+    &__back {
+      &::before {
+        top: -14%;
+        width: 33%;
+        height: 53%;
+      }
+    }
     &__item {
       gap: var(--gap);
     }
@@ -61,12 +131,31 @@
 
 @media (max-width: 1023px) {
   .robotization-nums {
+    &::before {
+      top: 24%;
+      left: -26%;
+      width: 69%;
+      height: 91%;
+      transform: scale(1, -1) rotate(-52deg);
+    }
+
+    &__back {
+      &::before {
+        top: -19%;
+        right: -17%;
+        width: 45%;
+        height: 50%;
+      }
+    }
+
     &__text {
       font-size: 16px;
     }
+
     &__item {
       padding: 40px 30px;
     }
+
     &__subhead {
       font-size: 48px;
       &--text {
@@ -78,21 +167,79 @@
 
 @media (max-width: 767px) {
   .robotization-nums {
+    &::before {
+      top: 22%;
+      left: -28%;
+      width: 67%;
+      height: 40%;
+      transform: scale(1, -1) rotate(-72deg);
+    }
+
+    &__back {
+      &::before {
+        top: -11%;
+        right: -27%;
+        width: 58%;
+        height: 44%;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        right: -47%;
+        bottom: -6%;
+        width: 72%;
+        height: 44%;
+        background-image: url("../img/robot-num-3.png");
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transform: rotate(-8deg);
+        z-index: 1;
+      }
+    }
+
     &__wrapper {
       grid-template-columns: 1fr;
+      padding-top: 0;
+      padding-bottom: 0;
     }
     &__item {
+      min-height: 150px;
       padding: 20px 82px;
 
       &:nth-child(3) {
         order: 1;
       }
     }
+    &__text {
+      max-width: 88%;
+    }
   }
 }
 
 @media (max-width: 479px) {
   .robotization-nums {
+    &::before {
+      top: 27%;
+      left: -41%;
+      width: 79%;
+      transform: scale(1, -1) rotate(-63deg);
+    }
+
+    &__back {
+      &::before {
+        top: -9%;
+        right: -38%;
+        width: 68%;
+        height: 38%;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
     &__item {
       padding-left: 27px;
       padding-right: 27px;
