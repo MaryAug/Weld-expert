@@ -133,6 +133,11 @@
 
 @media (max-width: 1199px) {
   .map {
+    &__title {
+      font-size: 32px; // изменено!
+      max-width: 350px; // изменено!
+    }
+
     &__card {
       max-width: 280px;
     }
@@ -147,11 +152,21 @@
     &__subhead {
       font-size: 18px;
     }
+
+    &__container {
+      bottom: 40px; // изменено!
+      left: 70px; // изменено!
+    }
   }
 }
 
 @media (max-width: 999px) {
   .map {
+    &__title {
+      font-size: 24px; // изменено!
+      max-width: 262px;
+    }
+
     &__card {
       max-width: 230px;
     }
@@ -170,8 +185,10 @@
     &__tel {
       font-size: 15px;
     }
-    &__title {
-      max-width: 330px;
+
+    &__container {
+      bottom: 20px; // изменено!
+      left: 40px; // изменено!
     }
   }
 }
@@ -179,7 +196,8 @@
 @media (max-width: 767px) {
   .map {
     &__title {
-      max-width: 245px;
+      font-size: 15px; // изменено!
+      max-width: 175px; // изменено!
     }
 
     &__point {
@@ -192,15 +210,13 @@
 @media (max-width: 479px) {
   .map {
     &__title {
-      font-size: 15px;
+      font-size: 13px; // изменено!
       max-width: 145px;
     }
-  }
-}
-@media (max-width: 359px) {
-  .map {
-    &__title {
-      font-size: 13px;
+
+    &__container {
+      bottom: 0px; // изменено!
+      left: 20px; // изменено!
     }
   }
 }

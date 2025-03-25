@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Роботизация</title>
+  <title>О компании</title>
   <meta name="description" content="description" />
 
   <link rel="stylesheet" href="css/style.min.css" />
@@ -151,224 +151,348 @@
 
       <main class="main">
         <!--  -->
-        <div class="modal">
-  <div class="modal__overlay">
-    <div class="modal__wrapper">
-      <div class="modal__title">
-        <span class="text text--red">Расскажите о&nbsp;задаче</span>
-        и&nbsp;мы&nbsp;ее&nbsp;решим
-      </div>
-      <form action="/" method="post" class="form">
-        <div class="modal__inner">
-          <div class="modal__block">
-            <label for="modal-name" class="form__subhead">Ваше имя</label>
-            <input
-              type="name"
-              id="modal-name"
-              class="form__input form__input--light"
-              placeholder="Введите имя"
-              required
-            />
-          </div>
-          <div class="modal__block">
-            <label for="modal-tel" class="form__subhead">Номер телефона</label>
-            <input
-              type="tel"
-              id="modal-tel"
-              class="form__input form__input--lightform__input--tel"
-              placeholder="+7(___)___-__-__"
-              required
-            />
-          </div>
-          <div class="modal__block">
-            <label for="modal-text" class="form__subhead">Задача</label>
-            <textarea
-              id="modal-text"
-              class="form__input form__input--light"
-              rows="3"
-              placeholder="Начните вводить текст"
-            ></textarea>
-          </div>
-          <div class="modal__row">
-            <input type="checkbox" class="form__checkbox" />
-            <p class="form__policy">
-              Я даю согласие на обработку моих
-              <span class="text text--red"
-                ><a href="#" class="form__link"> персональных данных</a></span
-              >
-            </p>
-          </div>
-        </div>
-        <input
-          type="submit"
-          class="btn form__btn"
-          value="Рассказать о задаче"
-        />
-      </form>
-    </div>
-  </div>
-</div>
-
-        <!--  -->
-        <section class="robotization-slider">
-  <div class="splide robotization-slider__slider">
-    <div class="splide__arrows robotization-slider__arrows">
-      <button
-        class="splide__arrow splide__arrow--prev robotization-slider__arrow slider-main-arrow robotization-slider__arrow--prev"
-      >
-        <img
-          src="../img/arrow-left.svg"
-          class="robotization-slider__arrow-img"
-          alt=""
-        />
-      </button>
-      <button
-        class="splide__arrow splide__arrow--next robotization-slider__arrow slider-main-arrow robotization-slider__arrow--next"
-      >
-        <img
-          src="../img/arrow-right.svg"
-          class="robotization-slider__arrow-img"
-          alt=""
-        />
-      </button>
-    </div>
-    <div class="splide__track">
-      <ul class="splide__list">
-        <li class="splide__slide robotization-slider__slide">
-          <img
-            src="../img/robotization-slider.jpg"
-            alt=""
-            class="robotization-slider__img"
-          />
-          <div class="robotization-slider__inner container">
-            <div class="robotization-slider__content">
-              <div class="robotization-slider__title">
-                Роботизация<br />
-                сварочных процессов<br />
-                <span class="text text--red"> решение нового поколения</span>
-              </div>
-              <div class="robotization-slider__btns">
-                <button class="btn modal-open">Рассказать о задаче</button>
-                <a href="" class="btn btn--outline">Перейти к решениям</a>
-              </div>
-            </div>
-          </div>
+        <section class="breadcrumbs">
+  <div class="container">
+    <nav class="breadcrumbs__nav">
+      <ul class="breadcrumbs__list list-reset">
+        <!-- Breadcrumb NavXT 7.3.0 -->
+        <li class="breadcrumbs__item">
+          <a
+            property="item"
+            typeof="WebPage"
+            title="Перейти на главную"
+            href=""
+            class="home breadcrumbs__link post-page"
+            ><span property="name">Главная</span></a
+          ><meta property="position" content="1" />
         </li>
-        <li class="splide__slide robotization-slider__slide">
-          <img
-            src="../img/robotization-slider.jpg"
-            alt=""
-            class="robotization-slider__img"
+        <li class="breadcrumbs__item">
+          <a
+            property="item"
+            typeof="WebPage"
+            title="Перейти"
+            href=""
+            class="post post-page breadcrumbs__link"
+            ><span property="name">О компании</span></a
+          ><meta property="position" content="2" />
+        </li>
+        <li class="breadcrumbs__item">
+          <span property="name" class="post post-page current-item"
+            >О компании</span
+          ><meta property="url" content="/" /><meta
+            property="position"
+            content="3"
           />
-          <div class="robotization-slider__inner container">
-            <div class="robotization-slider__content">
-              <div class="robotization-slider__title">
-                Роботизация<br />
-                сварочных процессов<br />
-                <span class="text text--red"> решение нового поколения</span>
-              </div>
-              <div class="robotization-slider__btns">
-                <button class="btn modal-open">Рассказать о задаче</button>
-                <a href="" class="btn btn--outline">Перейти к решениям</a>
-              </div>
-            </div>
-          </div>
         </li>
       </ul>
+    </nav>
+  </div>
+</section>
+
+        <!--  -->
+        <section class="mission section">
+  <div class="container">
+    <h1 class="title">О компании</h1>
+    <div class="mission__wrapper">
+      <div class="section__title mission__subtitle">
+        Миссия компании <span class="text text--red">Weld-expert</span><br />
+        Отказ от формальностей — наш путь к эффективности
+      </div>
+      <p class="mission__text">
+        Мы не просто решаем задачи — Мы создаём решения, идеально подходящие
+        именно вам. От подбора оборудования до профессиональных консультаций —
+        наша команда готова к любым вызовам
+      </p>
+      <p class="mission__text">
+        Мы тщательно анализируем каждый запрос, чтобы ваш проект был реализован
+        безупречно, а наш богатый опыт и прямое сотрудничество с лидерами
+        сварочной индустрии гарантирует высокое качество услуг
+      </p>
     </div>
   </div>
 </section>
 
         <!--  -->
-        <section class="robotization-nums section">
+        <section class="numbers section">
   <div class="container">
-    <ul class="robotization-nums__wrapper list-reset">
-      <li class="robotization-nums__item">
-        <div class="robotization-nums__subhead text text--red">
-          > 10 <span class="robotization-nums__subhead--text">лет</span>
-        </div>
-        <div class="robotization-nums__text">
-          Активно работаем в сварочной отрасли
-        </div>
+    <h2 class="section__title">О нас в цифрах</h2>
+
+    <ul class="numbers__list list-reset">
+      <li class="numbers__item numbers__item--1">
+        <div class="numbers__subtitle">> 200</div>
+        <p class="section__subhead numbers__text">
+          Выполнено более 200 пуско-наладочных работ
+        </p>
       </li>
-      <li class="robotization-nums__item">
-        <div class="robotization-nums__subhead">
-          > 25 <span class="robotization-nums__subhead--text">лет</span>
-        </div>
-        <div class="robotization-nums__text">
-          Сварочных аппаратов было продано
-        </div>
+      <li class="numbers__item numbers__item--2">
+        <div class="numbers__subtitle">> 1 млн</div>
+        <p class="section__subhead numbers__text">
+          Продано более 1&nbsp;млн единиц сварочного оборудования
+        </p>
       </li>
-      <li class="robotization-nums__item">
-        <div class="robotization-nums__subhead">> 200</div>
-        <div class="robotization-nums__text">
-          создано готовых проектов в машиностроении
-        </div>
+      <li class="numbers__item numbers__item--3">
+        <div class="numbers__subtitle">Топ - 3</div>
+        <p class="section__subhead numbers__text">
+          Дистрибьютеров сварочного оборудования в&nbsp;РФ
+        </p>
       </li>
-      <li class="robotization-nums__item">
-        <div class="robotization-nums__subhead text text--red">5</div>
-        <div class="robotization-nums__text">
-          Филиалов в Российской Федерации
-        </div>
+      <li class="numbers__item numbers__item--4">
+        <div class="numbers__subtitle">> 100</div>
+        <p class="section__subhead numbers__text">
+          Выполнено более 100 проектов по&nbsp;роботизации производств
+        </p>
       </li>
     </ul>
   </div>
 </section>
 
         <!--  -->
-        <section class="benefits section">
+        <section class="service section">
   <div class="container">
-    <h2 class="section__title">
-      Основные <span class="text text--red">преимущества</span><br />
-      роботизации
-    </h2>
-    <ul class="benefits__list list-reset">
-      <li class="benefits__item">
-        <div class="benefits__subhead">Повышение производительности</div>
-        <div class="benefits__text">
-          Производительность роботов при гамматроном подходе превосходит
-          человеческие возможности в несколько раз. После интеграции всегда
-          фиксируем рост кол-ва изделий за смену. Существенный рост дает
-          возможность работы автоматизированного цеха круглосуточно и без
-          перерыва.
-        </div>
+    <h2 class="section__title">Сервис</h2>
+    <p class="service__descr">
+      Мы проводим гарантийное и послегарантийное сервисное обслуживание
+      оборудования. При необходимости приедем прямо на место. Если вам нужна
+      помощь, просто позвоните нам
+    </p>
+
+    <ul class="service__list list-reset">
+      <li class="service__item">
+        <img src="../img/svc-1.svg" alt="" class="service__icon" />
+        <p class="service__text">Ремонт в сжатые сроки 1 — 3 дня</p>
       </li>
-      <li class="benefits__item">
-        <div class="benefits__subhead">Снижение брака и ошибок</div>
-        <div class="benefits__text">
-          Промышленные роботы имеют очень высокую точность позиционирования –
-          0.1–0.05 мм, а повторяемость позволяет достигать необходимого уровня
-          обработки изделияпри минимизации производственного брака. Исключение
-          человеческого фактора в технологическом процессе значительно снижает
-          процент рабочих ошибок.
-        </div>
+      <li class="service__item">
+        <img src="../img/svc-2.svg" alt="" class="service__icon" />
+        <p class="service__text">
+          Качество ремонта подтверждаем своей гарантией
+        </p>
       </li>
-      <li class="benefits__item">
-        <div class="benefits__subhead benefits__subhead--accent">
-          Безопасность
-        </div>
-        <div class="benefits__text">
-          Роботизация вредных отраслей промышленности или производственных цехов
-          с негативным влиянием на здоровье людей повышает эффективность данных
-          сфер. А если участие человека в каком-либо процессе ограничено
-          законодательно, то внедрение автоматов – единственный выход.
-        </div>
+      <li class="service__item">
+        <img src="../img/svc-3.svg" alt="" class="service__icon" />
+        <p class="service__text">
+          Проведём плановое техническое обслуживание и продлим гарантию сверх
+          заявленной производителем
+        </p>
+      </li>
+      <li class="service__item">
+        <img src="../img/svc-4.svg" alt="" class="service__icon" />
+        <p class="service__text">Обеспечим поддержку по техническим вопросам</p>
+      </li>
+      <li class="service__item">
+        <img src="../img/svc-5.svg" alt="" class="service__icon" />
+        <p class="service__text">
+          Привезем оборудование из нашего подменного фонда на время ремонта или
+          обслуживания вашего
+        </p>
+      </li>
+      <li class="service__item">
+        <img src="../img/svc-6.svg" alt="" class="service__icon" />
+        <p class="service__text">
+          Сварщики-демонстраторы организуют показ оборудования
+        </p>
+      </li>
+      <li class="service__item">
+        <img src="../img/svc-7.svg" alt="" class="service__icon" />
+        <p class="service__text">
+          Аттестованные сервисные инженеры проведут обучение ваших сотрудников,
+          настроят оборудование
+        </p>
+      </li>
+      <li class="service__item-accent">
+        <div class="service__subhead-accent">Наш успех — </div>
+        <p class="service__text-accent">
+          постоянное обучение наших сотрудников в России и за рубежом на
+          заводах-изготовителях сварочного оборудования
+        </p>
       </li>
     </ul>
   </div>
 </section>
 
         <!--  -->
-        <section class="consultation section">
-  <div class="consultation__back">
-    <div class="container">
-      <div class="consultation__wrapper">
-        <h2 class="section__title consultation__title">
-          Расскажите, какие задачи хотите
-          <span class="text text--red">роботизировать</span> и мы предложим вам
-          индивидуальное решение
-        </h2>
-        <a href="/" class="btn consultation__btn">Перейти на Роботикс</a>
+        <section class="assortment section">
+  <div class="container">
+    <h2 class="section__title">Наш ассортимент</h2>
+    <div class="assortment__wrapper">
+      <div class="assortment__content">
+        <p class="assortment__text">
+          <span class="assortment__text--extra"
+            >В магазинах и офисах
+            <span class="text text--red">WeldExpert</span></span
+          ><br />
+          вы можете приобрести всё нужное для исполнения любых ваших сварочных
+          задач. Мы поставляем оборудование для сварки и резки металлов,
+          сварочные материалы, запасные части, интегрируем и поставляем
+          сварочных роботов и др.
+        </p>
+        <div class="assortment__brands">
+          <p class="assortment__text assortment__text--extra">
+            Мы дистрибьютор ведущих мировых производителей сварочного
+            оборудования
+          </p>
+          <ul class="assortment__list list-reset">
+            <li class="assortment__brand">
+              <span class="text text--red text--bold">MAGMAWELD</span>
+              (Турция)
+            </li>
+            <li class="assortment__brand">
+              <span class="text text--red text--bold">ESAB</span> (Швеция)
+            </li>
+            <li class="assortment__brand">
+              <span class="text text--red text--bold">АО "ЭСВА"</span>
+              (Россия)
+            </li>
+            <li class="assortment__brand">
+              <span class="text text--red text--bold">"Optrel" AG</span>
+              (Швейцария)
+            </li>
+            <li class="assortment__brand">
+              <span class="text text--red text--bold">"TEKA"</span> (Германия)
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="splide assortment__slider">
+        <div class="splide__arrows assortment__arrows">
+          <button
+            class="splide__arrow splide__arrow--prev assortment__arrow slider-main-arrow assortment__arrow--prev"
+          >
+            <img
+              src="../img/arrow-left.svg"
+              class="assortment__arrow-img"
+              alt=""
+            />
+          </button>
+          <button
+            class="splide__arrow splide__arrow--next assortment__arrow slider-main-arrow assortment__arrow--next"
+          >
+            <img
+              src="../img/arrow-right.svg"
+              class="assortment__arrow-img"
+              alt=""
+            />
+          </button>
+        </div>
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide assortment__slide">
+              <img
+                src="../img/br-esab-color.jpg"
+                alt=""
+                class="assortment__img"
+              />
+            </li>
+            <li class="splide__slide assortment__slide">
+              <img
+                src="../img/br-fubag-color.png"
+                alt=""
+                class="assortment__img"
+              />
+            </li>
+            <li class="splide__slide assortment__slide">
+              <img
+                src="../img/br-magmaweld-color.jpg"
+                alt=""
+                class="assortment__img"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <!--  -->
+        <section class="team section">
+  <div class="container">
+    <h2 class="section__title">Наша команда</h2>
+    <div class="splide team__slider">
+      <div class="splide__arrows team__arrows">
+        <button
+          class="splide__arrow splide__arrow--prev team__arrow slider-main-arrow team__arrow--prev"
+        >
+          <img src="../img/arrow-left.svg" class="team__arrow-img" alt="" />
+        </button>
+        <button
+          class="splide__arrow splide__arrow--next team__arrow slider-main-arrow team__arrow--next"
+        >
+          <img src="../img/arrow-right.svg" class="team__arrow-img" alt="" />
+        </button>
+      </div>
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide team__slide">
+            <img src="../img/team-1.jpg" alt="" class="team__img" />
+            <div class="team__person person">
+              <div class="person__inner">
+                <div class="person__info">
+                  <div class="person__name">Фаина</div>
+                  <p class="person__post person__text">Менеджер по продажам</p>
+                </div>
+                <div class="person__contacts">
+                  <a
+                    href="tel:+79660313284"
+                    class="person__tel person__text link"
+                    >+7 (966) 031 32 84</a
+                  >
+                  <a
+                    href="mailto:d.ivaxhinenko@weld-expert.com"
+                    class="person__mail person__text link"
+                    >d.ivaxhinenko@weld-expert.com</a
+                  >
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="splide__slide team__slide">
+            <img src="../img/team-2.jpg" alt="" class="team__img" />
+            <div class="team__person person">
+              <div class="person__inner">
+                <div class="person__info">
+                  <div class="person__name">Дмитрий</div>
+                  <p class="person__post person__text">Менеджер по продажам</p>
+                </div>
+                <div class="person__contacts">
+                  <a
+                    href="tel:+79660313284"
+                    class="person__tel person__text link"
+                    >+7 (966) 031 32 84</a
+                  >
+                  <a
+                    href="mailto:d.ivaxhinenko@weld-expert.com"
+                    class="person__mail person__text link"
+                    >d.ivaxhinenko@weld-expert.com</a
+                  >
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide team__slide">
+            <img src="../img/team-3.jpg" alt="" class="team__img" />
+            <div class="team__person person">
+              <div class="person__inner">
+                <div class="person__info">
+                  <div class="person__name">Сергей</div>
+                  <p class="person__post person__text">Менеджер по продажам</p>
+                </div>
+                <div class="person__contacts">
+                  <a
+                    href="tel:+79660313284"
+                    class="person__tel person__text link"
+                    >+7 (966) 031 32 84</a
+                  >
+                  <a
+                    href="mailto:d.ivaxhinenko@weld-expert.com"
+                    class="person__mail person__text link"
+                    >d.ivaxhinenko@weld-expert.com</a
+                  >
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -673,6 +797,7 @@
 </footer>
 
     </div>
+
     <script src="js/app.min.js"></script>
   </body>
 </html>

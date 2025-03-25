@@ -79,9 +79,10 @@ img {
 
 .title {
   font-family: var(--second-family);
-  font-size: 96px;
+  font-size: 48px;
   font-weight: 700;
   margin: 0;
+  padding-bottom: 60px;
 }
 
 .section {
@@ -411,6 +412,10 @@ img {
 }
 
 @media (max-width: 1199px) {
+  body {
+    font-size: 14px; //изменено!
+  }
+
   .section {
     &__title {
       font-size: 32px;
@@ -471,14 +476,8 @@ img {
 }
 
 @media (max-width: 999px) {
-  body {
-    font-size: 14px;
-  }
-
-  .section {
-    &__title {
-      font-size: 24px;
-    }
+  .title {
+    font-size: 40px;
   }
 
   .container {
@@ -523,12 +522,16 @@ img {
 }
 
 @media (max-width: 767px) {
+  .title {
+    font-size: 32px;
+    padding-bottom: 40px;
+  }
+
   .section {
     margin-bottom: 60px;
 
     &__title {
-      font-size: 20px;
-      padding-bottom: 30px;
+      font-size: 24px;
     }
 
     &__subhead {
@@ -612,6 +615,16 @@ img {
 @media (max-width: 479px) {
   body {
     font-size: 11px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .section {
+    &__title {
+      font-size: 20px;
+    }
   }
 
   .container {

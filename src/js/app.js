@@ -153,6 +153,25 @@ document.addEventListener("DOMContentLoaded", function () {
   robotizationSlider.mount();
 });
 
+//assortment-slider
+document.addEventListener("DOMContentLoaded", function () {
+  const assortmentSlider = new Splide(".assortment__slider", {
+    type: "loop",
+    arrows: true,
+    pagination: false,
+    perPage: 1,
+    cover: true,
+    speed: 1100,
+    classes: {
+      arrows: "splide__arrows assortment__arrows",
+      arrow: "splide__arrow assortment__arrow slider-main-arrow",
+      prev: "splide__arrow--prev assortment__arrow--prev",
+      next: "splide__arrow--next assortment__arrow--next",
+    },
+  });
+  assortmentSlider.mount();
+});
+
 //map-points
 // const mapLinks = document.querySelectorAll(".map__point");
 // for (let i = 0; i < mapLinks.length; i++) {

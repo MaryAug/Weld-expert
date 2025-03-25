@@ -1,0 +1,198 @@
+.mission {
+  position: relative;
+  margin-top: -30px;
+  background-image: url("../img/line-back.jpg");
+  background-repeat: repeat-x;
+  background-position: bottom;
+  overflow: hidden;
+  z-index: 1;
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 27px;
+    left: 0%;
+    width: 41%;
+    height: 61%;
+    background-image: url("../img/expert-back-block.svg");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: contain;
+    z-index: 0;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 24px;
+    right: 0;
+    width: 640px;
+    height: 626px;
+    background-image: url("../img/mission-man.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: cover;
+    z-index: 1;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-bottom: 85px;
+  }
+
+  &__subtitle {
+    padding-bottom: 5px;
+    max-width: 995px;
+    z-index: 2;
+  }
+
+  &__text {
+    position: relative;
+    padding-bottom: 27px;
+    margin: 0;
+    max-width: 735px;
+    border-bottom: 2px solid transparent;
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border: 2px solid var(--color-gray-200);
+    }
+  }
+}
+
+@media (max-width: 1669px) {
+  .mission {
+    &::after {
+      height: 563px;
+      right: -5%;
+      width: 572px;
+    }
+  }
+}
+
+@media (max-width: 1399px) {
+  .mission {
+    &::after {
+      height: 79%;
+      right: -14%;
+      width: 43%;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .mission {
+    &::before {
+      left: -7%;
+      width: 54%;
+      height: 62%;
+    }
+
+    &::after {
+      height: 85%;
+      right: -10%;
+      width: 49%;
+    }
+
+    &__subtitle {
+      max-width: 675px;
+    }
+
+    &__text {
+      max-width: 580px;
+    }
+  }
+}
+@media (max-width: 1023px) {
+  .mission {
+    &::before {
+      display: none;
+    }
+    &::after {
+      height: 439px;
+      right: -4%;
+      width: 509px;
+    }
+
+    &__subtitle {
+      max-width: 510px;
+    }
+
+    &__wrapper {
+      padding-bottom: 40px;
+    }
+
+    &__text {
+      max-width: 425px;
+      padding-bottom: 15px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 899px) {
+  .mission {
+    &::after {
+      height: 303px;
+      right: -2%;
+      width: 349px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .mission {
+    &::after {
+      height: 234px;
+      right: -1%;
+      width: 269px;
+    }
+    &__wrapper {
+      padding-top: 10px;
+      padding-bottom: 75px;
+    }
+
+    &__text {
+      padding-bottom: 10px;
+
+      &:last-child {
+        max-width: 270px;
+      }
+    }
+  }
+}
+
+@media (max-width: 519px) {
+  .mission {
+    &::after {
+      height: 194px;
+      width: 217px;
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .mission {
+    &__subtitle {
+      padding-bottom: 20px;
+    }
+
+    &__wrapper {
+      gap: var(--gap);
+      padding-bottom: 175px;
+    }
+
+    &__text {
+      &:last-child {
+        max-width: 100%;
+      }
+    }
+  }
+}
